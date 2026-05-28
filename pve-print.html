@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Definitief PvE · Sit &amp; Heat 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --sans: 'Jost', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+    --ink: #111;
+    --ink-soft: #555;
+    --ink-mute: #999;
+    --line: #e0e0e0;
+    --fill: #f7f7f5;
+    --thread: #c0392b;
+    --green: #27ae60;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: #fff;
+    padding: 40px 48px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .print-header { margin-bottom: 40px; padding-bottom: 24px; border-bottom: 2px solid var(--ink); }
+  .print-header h1 { font-size: 28px; font-weight: 600; margin-bottom: 6px; }
+  .print-header p { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); letter-spacing: 0.08em; }
+
+  .print-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+    padding: 10px 20px; border: 1px solid var(--ink);
+    background: var(--ink); color: #fff; cursor: pointer;
+    margin-bottom: 40px; text-decoration: none;
+    transition: opacity .2s;
+  }
+  .print-btn:hover { opacity: 0.8; }
+
+  .cat-header {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em;
+    text-transform: uppercase; padding: 6px 0 5px;
+    margin-top: 28px; margin-bottom: 2px;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .pve-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 12px;
+  }
+  .pve-table th {
+    font-family: var(--mono); font-size: 8px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-mute);
+    padding: 5px 6px; text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  .pve-table td {
+    font-size: 11px; line-height: 1.55; padding: 7px 6px;
+    vertical-align: top; border-bottom: 1px solid var(--fill);
+  }
+  .pve-table tr:last-child td { border-bottom: none; }
+  .nr { font-family: var(--mono); font-size: 9px; font-weight: 500; min-width: 38px; }
+  .type-eis { font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; color: var(--thread); }
+  .type-wens { font-family: var(--mono); font-size: 8px; letter-spacing: 0.1em; color: var(--ink-soft); }
+  .eis-text { font-size: 12px; color: var(--ink); }
+  .meet-text { font-size: 11px; color: var(--ink-soft); }
+
+  .print-footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono); font-size: 10px; color: var(--ink-mute);
+    display: flex; justify-content: space-between;
+  }
+
+  @media print {
+    body { padding: 16px 20px; }
+    .print-btn { display: none; }
+    .cat-header { margin-top: 16px; }
+    @page { margin: 15mm; size: A4; }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel" src="js/pve-data.js"></script>
+<script type="text/babel">
+const PvePrint = () => {
+  if (!window.DEFINITIEF_PVE) return <p>Laden...</p>;
+
+  const eisCount  = DEFINITIEF_PVE.reduce((n, c) => n + c.rows.filter(r => r.t === "Eis").length, 0);
+  const wensCount = DEFINITIEF_PVE.reduce((n, c) => n + c.rows.filter(r => r.t === "Wens").length, 0);
+
+  return (
+    <div>
+      <div className="print-header">
+        <h1>Definitief Programma van Eisen</h1>
+        <p>Sit &amp; Heat · Van Reststof tot Tas · Berend Linssen · HAN IPO 2026</p>
+        <p style={{marginTop:4}}>{eisCount} eisen · {wensCount} wensen · 6 categorieën</p>
+      </div>
+
+      <button className="print-btn" onClick={() => window.print()}>
+        ↓ Opslaan als PDF (Ctrl+P)
+      </button>
+
+      {DEFINITIEF_PVE.map((cat, ci) => (
+        <div key={ci}>
+          <div className="cat-header" style={{color: cat.kleur === "var(--green)" ? "#27ae60" : cat.kleur === "var(--thread)" ? "#c0392b" : "#555"}}>
+            {cat.cat} ({cat.code})
+          </div>
+          <table className="pve-table">
+            <thead>
+              <tr>
+                <th style={{width:40}}>Nr.</th>
+                <th style={{width:36}}>Type</th>
+                <th>Eis / Wens</th>
+                <th style={{width:"35%"}}>Meetcriterium</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cat.rows.map((r, ri) => (
+                <tr key={ri}>
+                  <td className="nr" style={{color: cat.kleur === "var(--green)" ? "#27ae60" : cat.kleur === "var(--thread)" ? "#c0392b" : "#555"}}>{r.nr}</td>
+                  <td><span className={r.t === "Eis" ? "type-eis" : "type-wens"}>{r.t === "Eis" ? "EIS" : "WENS"}</span></td>
+                  <td className="eis-text">{r.eis}</td>
+                  <td className="meet-text">{r.meet}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+
+      <div className="print-footer">
+        <span>Sit &amp; Heat · Afstudeerproject 2026 · HAN Industrial Product Ontwerpen</span>
+        <span>Berend Linssen</span>
+      </div>
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('app')).render(<PvePrint />);
+</script>
+</body>
+</html>

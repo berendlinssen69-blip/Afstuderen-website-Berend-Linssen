@@ -1,0 +1,18 @@
+# Adobe auto-save en tijdelijke bestanden
+**/Adobe Premiere Pro Auto-Save/
+*.prproj
+~$*
+
+# Grote afbeeldingen die GitHub niet accepteert (>100MB samen)
+# PSD bestanden
+*.psd
+
+# Grote PNG scans (20-27 MB per stuk)
+"foto's en animaties website/proces tas/tas prototypes/prototype v1/image (22).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v1/image (23).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v1/image (24).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v1/image (25).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v2/image (22).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v2/image (23).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v2/image (24).png"
+"foto's en animaties website/proces tas/tas prototypes/prototype v2/image (25).png"
