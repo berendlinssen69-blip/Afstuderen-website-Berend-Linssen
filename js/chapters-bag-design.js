@@ -1662,16 +1662,16 @@ const Step25_DefinitiefPvE = () => {
                 {cat.cat}
               </div>
               <div style={{
-                display: 'grid', gridTemplateColumns: '44px 38px 1fr 1fr',
+                display: 'grid', gridTemplateColumns: '44px 38px 1fr 1fr 140px',
                 gap: 8, padding: '4px 0', borderBottom: '1px solid var(--fill-2)',
                 fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.08em',
                 textTransform: 'uppercase', color: 'var(--ink-soft)',
               }}>
-                <span>Nr.</span><span>Type</span><span>Eis / Wens</span><span>Meetcriterium</span>
+                <span>Nr.</span><span>Type</span><span>Eis / Wens</span><span>Meetcriterium</span><span>Bron</span>
               </div>
               {cat.rows.map((r, ri) => (
                 <div key={ri} style={{
-                  display: 'grid', gridTemplateColumns: '44px 38px 1fr 1fr',
+                  display: 'grid', gridTemplateColumns: '44px 38px 1fr 1fr 140px',
                   gap: 8, padding: '7px 0', borderBottom: '1px solid var(--fill-2)',
                   fontSize: 11, lineHeight: 1.4, alignItems: 'start',
                 }}>
@@ -1682,6 +1682,7 @@ const Step25_DefinitiefPvE = () => {
                   }}>{r.t === "Eis" ? "EIS" : "WENS"}</span>
                   <span style={{ color: 'var(--ink)' }}>{r.eis}</span>
                   <span style={{ color: 'var(--ink-soft)', fontSize: 10 }}>{r.meet}</span>
+                  <span style={{ color: 'var(--ink-soft)', fontSize: 9, fontFamily: 'var(--mono)', lineHeight: 1.5 }}>{r.bron || '—'}</span>
                 </div>
               ))}
             </div>
