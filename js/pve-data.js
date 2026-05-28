@@ -87,10 +87,10 @@ window.DEFINITIEF_PVE = [
 ──────────────────────────────────────────────────────────────────────────── */
 window.PVE_TOETSING = [
   /* ── Duurzaamheid & Circulariteit ── */
-  { nr: "D.1", status: "deels",    bewijs: "SDA is hoofdmateriaal in alle prototypes. Formeel gewicht per tas (0,72 kg) gedocumenteerd in Stap 27. 70%-grens wordt getoetst bij definitief snijplan na v4." },
+  { nr: "D.1", status: "deels",    bewijs: "SDA is hoofdmateriaal in alle prototypes. Formeel gewicht per tas (0,72 kg) gedocumenteerd in Stap 27. 70% grens wordt getoetst bij definitief snijplan na v4." },
   { nr: "D.2", status: "voldaan",  bewijs: "Materiaalherkomst gedocumenteerd: materiaalinventarisatie, harde cijfers (Stap 27), CO₂-berekening. Communiceerbaar via label en website." },
-  { nr: "D.3", status: "voldaan",  bewijs: "Hergebruikniveau onderbouwd met Potting et al. (2017) R-strategie in Stap 04. Direct hergebruik zonder destructieve bewerking." },
-  { nr: "D.4", status: "gepland",  bewijs: "Zero-waste snijlogica wordt uitgewerkt bij definitief patroon voor Blueview (week 1–2 juni)." },
+  { nr: "D.3", status: "voldaan",  bewijs: "Hergebruikniveau onderbouwd met Potting et al. (2017) R strategie in Stap 04. Direct hergebruik zonder destructieve bewerking." },
+  { nr: "D.4", status: "gepland",  bewijs: "Zero waste snijlogica wordt uitgewerkt bij definitief patroon voor Blueview (week 1–2 juni)." },
   { nr: "D.5", status: "gepland",  bewijs: "Patchwork systeem voor kleine lappen (<A4) wordt uitgewerkt in patroonontwikkeling na v4. Concept aangetoond in materiaalinventarisatie." },
   { nr: "D.6", status: "gepland",  bewijs: "Modulariteit/herstelbaarheid wordt getoetst bij demontageproef v4 (juni)." },
 
@@ -116,7 +116,7 @@ window.PVE_TOETSING = [
   { nr: "F.8",  status: "deels",   bewijs: "Geen scherpe randen in V3/V4. Formele veiligheidsinspectie bij eindprototype." },
   { nr: "F.9",  status: "deels",   bewijs: "Click-systeem voor slingback ingekocht voor V4 (Stap 23). Functionele test volgt bij v4 afronden." },
   { nr: "F.10", status: "deels",   bewijs: "Binnenvak aanwezig in V3 (Stap 21). Binnenhoes V4 nog in productie; definitief bij eindinspectie." },
-  { nr: "F.11", status: "voldaan", bewijs: "SDA is inherent UV- en weerbestendig (Materiaalonderzoek, Stap 05). Geen extra behandeling nodig." },
+  { nr: "F.11", status: "voldaan", bewijs: "SDA is inherent UV en weerbestendig (Materiaalonderzoek, Stap 05). Geen extra behandeling nodig." },
   { nr: "F.12", status: "gepland", bewijs: "Stabiliteitsstest bij volledig gevulde v4 (juni)." },
 
   /* ── Esthetiek & Merkidentiteit ── */
@@ -124,7 +124,7 @@ window.PVE_TOETSING = [
   { nr: "A.2", status: "deels",    bewijs: "Kwaliteitsafwerking geëvolueerd V1→V4. Finale inspectie bij eindprototype (50 cm, daglicht)." },
   { nr: "A.3", status: "gepland",  bewijs: "Formele genderneutraliteitstest (2 personen) bij gebruikerstest juni." },
   { nr: "A.4", status: "gepland",  bewijs: "Label ontwerp volgt in brandingtaak (juni, week 1–2)." },
-  { nr: "A.5", status: "deels",    bewijs: "V4 buitenste in één kleur SDA. Kleurconfirmatie na Blueview proefproductie." },
+  { nr: "A.5", status: "deels",    bewijs: "V4 buitenste in een kleur SDA. Kleurconfirmatie na Blueview proefproductie." },
   { nr: "A.6", status: "deels",    bewijs: "Hardware toonvast gekozen op basis van Henri interview 2 (Stap 22). Visuele check bij eindproduct." },
   { nr: "A.7", status: "voldaan",  bewijs: "Kleurvariatie per exemplaar is bewust onderdeel van het concept. Freitag als validatie (Stap 05). Geen twee tassen hoeven identiek te zijn." },
 
@@ -132,13 +132,13 @@ window.PVE_TOETSING = [
   { nr: "E.1", status: "voldaan",  bewijs: "Kostprijsopbouw gedocumenteerd in Stap 27: hardware €6–8, materiaal €0, arbeid €0 → kostprijs ~€7/tas." },
   { nr: "E.2", status: "voldaan",  bewijs: "Retail €70, inkoop €28 (Henri: marge 2,5×). Past in €60–100 segment bevestigd door Henri (Stap 22)." },
   { nr: "E.3", status: "deels",    bewijs: "Henri positief na v3 (Stap 22): 'ik denk dat we dit kunnen verkopen.' Formeel inkoopgesprek volgt na eindprototype." },
-  { nr: "E.4", status: "voldaan",  bewijs: "Geen nieuwe machines: Blueview gebruikt bestaande naai- en aflockinstallatie (Stap 24). S&H levert restmateriaal en hardware." },
+  { nr: "E.4", status: "voldaan",  bewijs: "Geen nieuwe machines: Blueview gebruikt bestaande naai en aflock machines (Stap 24). S&H levert restmateriaal en hardware." },
   { nr: "E.5", status: "gepland",  bewijs: "Omzetsnelheid te valideren via Henri na proefexemplaren (juni/juli)." },
 
   /* ── Opleiding & Projectkaders ── */
   { nr: "O.1", status: "voldaan",  bewijs: "Volledig gedocumenteerd: website (27 stappen), Miro procesboard, PDF bijlagen (PvA, onderzoeksrapporten, risicoanalyse)." },
   { nr: "O.2", status: "deels",    bewijs: "V4 buitenste + verstelsysteem gereed. Binnenhoes wordt afgemaakt (week 1 juni). Eindbeoordeling bij complete v4." },
-  { nr: "O.3", status: "voldaan",  bewijs: "Deze toetsingstabel — aanwezig als onderdeel van Stap 25. Tevens per prototype gedocumenteerd in Stap 19–23." },
+  { nr: "O.3", status: "voldaan",  bewijs: "Deze toetsingstabel aanwezig als onderdeel van Stap 25. Tevens per prototype gedocumenteerd in Stap 19–23." },
   { nr: "O.4", status: "gepland",  bewijs: "Productiemallen worden aangeleverd bij productiehandleiding voor Blueview (week 1–2 juni)." },
   { nr: "O.5", status: "gepland",  bewijs: "Productiehandleiding (atelier manual) met mallen, knipvolgorde en afwerkingsinstructies wordt opgeleverd voor eindzitting (30 juni)." },
 ];
