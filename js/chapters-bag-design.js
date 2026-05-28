@@ -1480,6 +1480,101 @@ const Step24_SociaalAtelier = () => {
 /* ══════════════════════════════════════════════════════════════════════════
    STAP 25 · DEFINITIEF PROGRAMMA VAN EISEN
 ══════════════════════════════════════════════════════════════════════════ */
+/* helper: status badge config */
+const PVE_STATUS_CFG = {
+  voldaan: { label: "Voldaan",      bg: "var(--green)",   fg: "#fff" },
+  deels:   { label: "Deels",        bg: "var(--thread)",  fg: "#fff" },
+  gepland: { label: "Gepland (juni)", bg: "var(--fill-2)", fg: "var(--ink-soft)" },
+};
+
+const ToetsStatusBadge = ({ status }) => {
+  const cfg = PVE_STATUS_CFG[status] || PVE_STATUS_CFG.gepland;
+  return (
+    <span style={{
+      display: 'inline-block',
+      fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.1em',
+      textTransform: 'uppercase', whiteSpace: 'nowrap',
+      background: cfg.bg, color: cfg.fg,
+      padding: '3px 6px', lineHeight: 1,
+    }}>{cfg.label}</span>
+  );
+};
+
+const PvEToetsingstabel = () => {
+  /* Bouw lookup: nr → toetsing row */
+  const toetsMap = {};
+  (window.PVE_TOETSING || []).forEach(t => { toetsMap[t.nr] = t; });
+
+  const counts = { voldaan: 0, deels: 0, gepland: 0 };
+  (window.PVE_TOETSING || []).forEach(t => { if (counts[t.status] !== undefined) counts[t.status]++; });
+  const total = counts.voldaan + counts.deels + counts.gepland;
+
+  return (
+    <div style={{ marginTop: 48 }}>
+      {/* Header */}
+      <div style={{ borderTop: '2px solid var(--ink)', paddingTop: 20, marginBottom: 20 }}>
+        <div style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginBottom: 8 }}>
+          O.3 · TOETSINGSTABEL — STAND VAN ZAKEN BIJ INLEVERING 2 JUNI 2026
+        </div>
+        <p style={{ fontSize: 12, lineHeight: 1.7, color: 'var(--ink-soft)', margin: 0, maxWidth: '60ch' }}>
+          Onderstaande tabel toont per eis en wens de huidige status. <strong style={{color:'var(--ink)'}}>Voldaan</strong> is aantoonbaar aangetoond in het verslag. <strong style={{color:'var(--thread)'}}>Deels</strong> is in gang maar nog niet formeel gevalideerd. <strong style={{color:'var(--ink)'}}>Gepland (juni)</strong> wordt uitgevoerd in de periode tot de eindzitting op 30 juni.
+        </p>
+        {/* Teller */}
+        <div style={{ display: 'flex', gap: 20, marginTop: 16 }}>
+          {Object.entries(counts).map(([k, v]) => {
+            const cfg = PVE_STATUS_CFG[k];
+            return (
+              <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ width: 10, height: 10, background: cfg.bg, border: k === 'gepland' ? '1px solid var(--line-soft)' : 'none', display: 'inline-block', flexShrink: 0 }} />
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.1em', color: 'var(--ink-soft)' }}>
+                  {cfg.label}: <strong style={{color:'var(--ink)'}}>{v}/{total}</strong>
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Tabel per categorie */}
+      {DEFINITIEF_PVE.map((cat, ci) => (
+        <div key={ci} style={{ marginBottom: 20 }}>
+          <div style={{
+            fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.14em',
+            textTransform: 'uppercase', color: cat.kleur,
+            borderBottom: `1px solid ${cat.kleur}`, paddingBottom: 4, marginBottom: 4,
+          }}>
+            {cat.cat}
+          </div>
+          {/* Kolomhoofden */}
+          <div style={{
+            display: 'grid', gridTemplateColumns: '44px 90px 1fr 1.6fr',
+            gap: 8, padding: '3px 0', borderBottom: '1px solid var(--fill-2)',
+            fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.08em',
+            textTransform: 'uppercase', color: 'var(--ink-mute)',
+          }}>
+            <span>Nr.</span><span>Status</span><span>Eis / Wens</span><span>Toelichting / bewijs</span>
+          </div>
+          {cat.rows.map((r, ri) => {
+            const toets = toetsMap[r.nr] || { status: 'gepland', bewijs: '—' };
+            return (
+              <div key={ri} style={{
+                display: 'grid', gridTemplateColumns: '44px 90px 1fr 1.6fr',
+                gap: 8, padding: '7px 0', borderBottom: '1px solid var(--fill-2)',
+                fontSize: 11, lineHeight: 1.45, alignItems: 'start',
+              }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 9, color: cat.kleur, fontWeight: 500 }}>{r.nr}</span>
+                <ToetsStatusBadge status={toets.status} />
+                <span style={{ color: 'var(--ink)' }}>{r.eis}</span>
+                <span style={{ color: 'var(--ink-soft)', fontSize: 10, lineHeight: 1.5 }}>{toets.bewijs}</span>
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Step25_DefinitiefPvE = () => {
   const ref = useReveal();
   const eisCount  = DEFINITIEF_PVE.reduce((n, c) => n + c.rows.filter(r => r.t === "Eis").length, 0);
@@ -1515,7 +1610,7 @@ const Step25_DefinitiefPvE = () => {
           </div>
         </div>
 
-        {/* Rechter kolom — scrollbare tabel */}
+        {/* Rechter kolom — scrollbare PvE tabel */}
         <div className="step-stage reveal-right" style={{ flexDirection: 'column', overflowY: 'auto', maxHeight: '80vh', paddingRight: 4, alignItems: 'stretch', justifyContent: 'flex-start' }}>
           {DEFINITIEF_PVE.map((cat, ci) => (
             <div key={ci} style={{ marginBottom: ci < DEFINITIEF_PVE.length - 1 ? 20 : 0 }}>
@@ -1551,6 +1646,9 @@ const Step25_DefinitiefPvE = () => {
               ))}
             </div>
           ))}
+
+          {/* Toetsingstabel — stand van zaken */}
+          <PvEToetsingstabel />
         </div>
 
       </div>

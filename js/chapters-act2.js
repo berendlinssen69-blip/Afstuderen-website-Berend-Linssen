@@ -1546,51 +1546,90 @@ const Outro = () => (
       Gemaakt van wat over was.<br/>Gedragen waar het thuishoort.
     </h2>
 
-    {/* Vervolgstappen — komende 30 dagen */}
+    {/* Vervolgstappen — juni 2026 */}
     <div style={{marginTop:56, marginBottom:48, borderTop:"1px solid rgba(255,255,255,0.15)", paddingTop:40}}>
       <div className="step-num" style={{marginBottom:16, color:"rgba(255,255,255,0.4)"}}><span className="bullet"/>WAT HIERNA KOMT</div>
       <h3 className="wf-title" style={{fontSize:"clamp(20px, 2.5vw, 32px)", marginBottom:16}}>
-        De komende 30 dagen
+        Testplan: 2 juni → 30 juni
       </h3>
-      <p className="wf-body" style={{marginBottom:40, fontSize:16, lineHeight:1.7}}>
-        Het verslag wordt ingeleverd, maar het project stopt hier niet. Het ontwerp is bewezen haalbaar, de richting is vastgesteld, en de eerste productiepartner (Blueview) heeft groen licht gegeven. Wat nu volgt is het traject van prototype naar markt.
+      <p className="wf-body" style={{marginBottom:12, fontSize:16, lineHeight:1.7}}>
+        Het verslag wordt ingeleverd op <strong style={{color:"var(--bg)"}}>2 juni</strong>. De eindzitting is op <strong style={{color:"var(--bg)"}}>30 juni</strong>. In de tussenliggende vier weken wordt het ontwerp afgerond, getest en gedocumenteerd. Het eindproduct en de validatie worden gepresenteerd buiten het verslag om, als onderdeel van de zitting.
       </p>
+
+      {/* Tijdlijn */}
+      <div style={{marginBottom:40, padding:"16px 20px", border:"1px solid rgba(255,255,255,0.12)", display:"flex", gap:0}}>
+        {[
+          {week:"Week 1", datum:"2–6 juni",   kleur:"var(--thread)", items:["Prototype v4 afmaken (binnenhoes)", "PvE-toetsing v4 uitvoeren"]},
+          {week:"Week 2", datum:"9–13 juni",  kleur:"var(--thread)", items:["Productiehandleiding schrijven", "Branding/label ontwerpen"]},
+          {week:"Week 3", datum:"16–20 juni", kleur:"var(--green)",  items:["Proefproductie bij Blueview", "Documentatie atelier"]},
+          {week:"Week 4", datum:"23–27 juni", kleur:"var(--green)",  items:["Gebruikerstesten (draagtest, functietest)", "Presentatie voorbereiden"]},
+        ].map(({week, datum, kleur, items}, i) => (
+          <div key={i} style={{flex:1, padding:"12px 16px", borderLeft: i>0 ? "1px solid rgba(255,255,255,0.08)" : "none"}}>
+            <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.14em", color:kleur, marginBottom:4}}>{week}</div>
+            <div style={{fontFamily:"var(--mono)", fontSize:10, color:"rgba(255,255,255,0.5)", marginBottom:10}}>{datum}</div>
+            {items.map((item, j) => (
+              <div key={j} style={{display:"flex", gap:6, alignItems:"flex-start", marginBottom:6}}>
+                <span style={{color:kleur, fontSize:10, flexShrink:0, marginTop:1}}>→</span>
+                <span style={{fontFamily:"var(--mono)", fontSize:10, color:"rgba(255,255,255,0.7)", lineHeight:1.4}}>{item}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* 6 stappen */}
       <div style={{display:"grid", gridTemplateColumns:"repeat(3, 1fr)", gap:"2px"}}>
         {[
           {
             num:"01",
+            week:"Week 1",
+            pve:"F.1 · F.3 · F.4 · F.5 · M.3 · O.2",
             title:"Prototype v4 afronden en keuren",
-            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het Programma van Eisen. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een v5 nodig voor specifieke aanpassingen? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
+            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het PvE: laagentelling, laptopruimte meten, riemlengte controleren, 45°-kanteltest uitvoeren. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een kleine v4.1 nodig? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
           },
           {
             num:"02",
+            week:"Week 2",
+            pve:"M.4 · M.6 · O.4 · O.5",
             title:"Productiehandleiding schrijven",
-            body:"Blueview heeft gevraagd om mallen en een gedetailleerd stappenplan. Die worden uitgewerkt: een visuele handleiding met knipvolgorde, naadmarges, afwerkingseisen en een kleuradvies voor de stofcombinaties. Doel: elke naaister kan de tas maken zonder directe begeleiding."
+            body:"Blueview heeft gevraagd om mallen en een gedetailleerd stappenplan. Die worden uitgewerkt: een visuele handleiding met knipvolgorde (incl. zero-waste logica D.4), naadmarges van 1 cm (M.4), afwerkingseisen en een kleursorteringsgids. Doel: elke naaister kan de tas maken zonder directe begeleiding van de ontwerper."
           },
           {
             num:"03",
+            week:"Week 2",
+            pve:"A.4",
             title:"Branding uitwerken",
-            body:"De tas heeft nog geen label, tag of verpakking. Branding die niet aansluit op het product ondermijnt het verhaal. Nu het product concreet is, wordt een eenvoudig brandingelement ontworpen, een naailabel, gemaakt van restmateriaal of gerecycled materiaal dat de herkomst van het product zichtbaar maakt op straat."
+            body:"De tas heeft nog geen label. Branding die niet aansluit op het product ondermijnt het verhaal. Nu het product concreet is, wordt een eenvoudig naailabel ontworpen van restmateriaal of gerecycled papier, met merknaam en materiaalherkomst (A.4). Het label maakt de circulaire herkomst zichtbaar op straat."
           },
           {
             num:"04",
-            title:"Testmodellen opvragen bij Blueview",
-            body:"De eerste proefproductie bij Blueview wordt ingepland. Doel: niet een perfecte eindtas, maar inzicht in hoe het patroon en de handleiding werken in de praktijk van het atelier. Afwijkingen worden gedocumenteerd en verwerkt in de definitieve versie van het patroon."
+            week:"Week 3",
+            pve:"M.1 · M.2 · M.7 · M.9 · D.4",
+            title:"Proefproductie bij Blueview",
+            body:"De eerste proefproductie bij Blueview wordt ingepland. Doel: niet een perfecte eindtas, maar inzicht in hoe het patroon en de handleiding werken in de praktijk van het atelier. Hoeveel lagen worden bereikt? Welke stappen zijn moeilijk? Afwijkingen worden gedocumenteerd en verwerkt in de definitieve versie van het patroon en de handleiding."
           },
           {
             num:"05",
-            title:"Gebruikerstesten en promomateriaal",
-            body:"De tas wordt een week lang dagelijks gebruikt, fiets, stad, terras. Specifiek worden draagcomfort, de werking van het click systeem getest. Tegelijk worden promotie foto's en een korte video gemaakt voor de presentatie en eventuele inkoopgesprekken."
+            week:"Week 4",
+            pve:"F.5 · F.6 · F.7 · F.8 · F.12 · A.3",
+            title:"Gebruikerstesten",
+            body:"De tas wordt door minimaal drie personen getest: 45°-kanteltest (F.5), sluiting in max. 5 seconden (F.6), rits drie keer heen-terug (F.7). Daarnaast een week dagelijks gebruik door de ontwerper: fiets, stad, terras. Draagcomfort, click-systeem en stabiliteit worden gedocumenteerd. Tegelijk: promotie­foto's en korte video voor de presentatie."
           },
           {
             num:"06",
+            week:"Week 4",
+            pve:"O.1 · O.2 · O.3",
             title:"Presentatie voorbereiden",
-            body:"De presentatie voor HAN IPO vat het volledige traject samen: van reststroom tot productierijp concept. De PvE toetsing van v4 is onderdeel van de presentatie, dit is het moment waarop het product formeel wordt getoetst aan alle eisen. Na de presentatie ligt er een compleet dossier klaar voor Sit & Heat om mee verder te gaan."
+            body:"De presentatie voor HAN IPO op 30 juni vat het volledige traject samen: van reststroom tot productierijp concept. De PvE-toetsing van v4 (inclusief de testresultaten van stap 05) is onderdeel van de presentatie. Dit is het moment waarop het product formeel getoetst wordt aan alle eisen. Na de presentatie ligt er een compleet dossier klaar voor Sit & Heat."
           },
-        ].map(({num, title, body}) => (
+        ].map(({num, week, pve, title, body}) => (
           <div key={num} style={{padding:"28px 24px", borderTop:"1px solid rgba(255,255,255,0.12)"}}>
-            <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"rgba(255,255,255,0.35)", marginBottom:12}}>{num}</div>
-            <div style={{fontFamily:"var(--mono)", fontSize:11, letterSpacing:"0.06em", color:"var(--bg)", marginBottom:10, lineHeight:1.4}}>{title}</div>
+            <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:12}}>
+              <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"rgba(255,255,255,0.35)"}}>{num}</div>
+              <div style={{fontFamily:"var(--mono)", fontSize:8, letterSpacing:"0.1em", color:"var(--thread)"}}>{week}</div>
+            </div>
+            <div style={{fontFamily:"var(--mono)", fontSize:11, letterSpacing:"0.06em", color:"var(--bg)", marginBottom:8, lineHeight:1.4}}>{title}</div>
+            <div style={{fontFamily:"var(--mono)", fontSize:8, letterSpacing:"0.08em", color:"rgba(255,255,255,0.3)", marginBottom:10}}>PvE: {pve}</div>
             <p className="wf-body" style={{margin:0, fontSize:13, lineHeight:1.7}}>{body}</p>
           </div>
         ))}

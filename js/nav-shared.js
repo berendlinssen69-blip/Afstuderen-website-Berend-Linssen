@@ -187,7 +187,6 @@ const NavSimple = ({ activePage = '' }) => {
       <div className="logo">SIT &amp; HEAT AFSTUDEER VERSLAG</div>
       <div className="menu">
         {link('index.html', 'home', 'Home')}
-        {link('de-tas.html', 'de-tas', 'De tas')}
         <ProcesDropdown isMainPage={false} />
         <OnderzoekDropdown />
       </div>

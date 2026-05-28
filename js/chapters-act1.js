@@ -5,7 +5,6 @@ const Nav = ({ chapter, total }) => (
     <div className="logo">SIT &amp; HEAT AFSTUDEER VERSLAG</div>
     <div className="menu">
       <a className={chapter <= 1 ? "active" : ""} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Home</a>
-      <a href="de-tas.html">De tas</a>
       <ProcesDropdown isMainPage={true} />
       <OnderzoekDropdown isMainPage={true} />
     </div>
