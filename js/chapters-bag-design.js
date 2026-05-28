@@ -307,7 +307,7 @@ const PROTO3_FEEDBACK = [
   {
     cat: "Hardware",
     text: "Haaksysteem werkt niet universeel",
-    sub:  ["Haakpositie verschilt per lichaamsbouw (jij vs. Hannan)", "Haken moeizaam met 1 hand, lus niet te vinden achter de rug", "3D-geprint haaksysteem is duurder dan bestaande oplossingen"],
+    sub:  ["Haakpositie verschilt per lichaamsbouw (Berend vs. Hannan)", "Haken moeizaam met 1 hand, lus niet te vinden achter de rug", "3D geprint haaksysteem is duurder dan bestaande oplossingen"],
     why:  "Het systeem is niet universeel inzetbaar. Bovendien is 3D printen duurder dan een ingekocht click systeem.",
     fix:  "Click systeem inkopen (goedkoper, universeler)",
     pve:  "F.6 + F.9 + E.4",
@@ -375,12 +375,12 @@ const DRAAG_WIJZEN = [
 ];
 
 const SLUIT_OPTIONS = [
-  { name: "Rits",        detail: "Veilig · toegankelijk",              chosen: false },
-  { name: "Magneet",     detail: "Makkelijk maar minder veilig",       chosen: false },
-  { name: "Klittenband", detail: "Onvoldoende voor dit gebruik",       chosen: false },
-  { name: "Drukknoop",   detail: "Te klein, minder duurzaam",          chosen: false },
-  { name: "Gesp",        detail: "Goed maar complex in bediening",     chosen: false },
-  { name: "Open top",    detail: "Niet geschikt voor daggebruik",      chosen: false },
+  { name: "Rits",        detail: "Veilig · toegankelijk · gekozen",    chosen: true  },
+  { name: "Magneet",     detail: "Makkelijk maar onveilig op de fiets", chosen: false },
+  { name: "Klittenband", detail: "Onvoldoende voor dagelijks gebruik",  chosen: false },
+  { name: "Drukknoop",   detail: "Te klein, minder duurzaam",           chosen: false },
+  { name: "Gesp",        detail: "Goed maar te complex bij fietsen",    chosen: false },
+  { name: "Open top",    detail: "Niet geschikt voor daggebruik",       chosen: false },
 ];
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -822,6 +822,9 @@ const Step17_Schetsen = () => {
         <span className="sketch-eyebrow">Stap 17 · Schetsen &amp; Vormverkenning</span>
         <h2 className="sketch-h2">30 schetsen,<br /><em>twee vormen over.</em></h2>
         <p className="sketch-sub">
+          De selectie is gebaseerd op drie criteria: maakbaarheid in het atelier (eenvoudige, rechte naden), tolerantie voor materiaalvariatie (werkt ook met kleinere restlappen) en functionele haalbaarheid voor de gekozen doelgroep. Vormen met curves, complexe constructies of afhankelijkheid van grote aaneengesloten lappen zijn in deze fase afgevallen.
+        </p>
+        <p className="sketch-sub" style={{ marginTop: 6 }}>
           Scroll snel langs alle schetsen, of sleep de kaarten een voor een door.
         </p>
         <div className="sketch-drag-hint">
@@ -1027,6 +1030,10 @@ const Step19_Prototype1 = () => {
               waardoor de tas overall kleiner uitviel dan bedoeld (M.4).
               Alle zeven bevindingen zijn verwerkt in de volgende versie.
             </p>
+            <p style={{ fontSize: 12, lineHeight: 1.55, marginTop: 10, color: 'var(--ink-soft)', borderTop: '1px solid var(--line-soft)', paddingTop: 10 }}>
+              <strong style={{ color: 'var(--ink)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Aanvaard compromis</strong><br />
+              Het basisconcept van een tas, twee draagwijzen is ondanks de problemen behouden. Overwogen alternatief: twee losse tassen (een crossbody, een slingback). Verworpen omdat dat de kern van het ontwerp zou loslaten en de productiecomplexiteit zou verdubbelen. De keuze om door te itereren op dit concept was een bewuste designbeslissing, geen gebrek aan alternatief.
+            </p>
           </div>
         </div>
 
@@ -1114,6 +1121,10 @@ const Step20_Prototype2 = () => {
               haaksysteem voor de slingback functie (F.9) en is het materiaalhergebruik
               nog beperkt tot grote lappen (D.1/D.5). Deze drie punten
               sturen de ontwikkeling van prototype 3.
+            </p>
+            <p style={{ fontSize: 12, lineHeight: 1.55, marginTop: 10, color: 'var(--ink-soft)', borderTop: '1px solid var(--line-soft)', paddingTop: 10 }}>
+              <strong style={{ color: 'var(--ink)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Aanvaarde compromissen</strong><br />
+              Het verstelsysteem is bewust nog niet herontworpen in deze versie: eerst het basisconcept valideren, dan pas het systeem integreren. Het patchwork patroon voor kleine restlappen verhoogt de productietijd, maar materiaalbenutting (D.1) weegt zwaarder dan productie efficiëntie. Dat is een bewuste keuze, niet een onopgemerkt nadeel.
             </p>
           </div>
         </div>
@@ -1214,6 +1225,12 @@ const Step21_Prototype3 = () => {
               worden beide samengevoegd tot een systeem, het haaksysteem
               vervangen door een click-systeem en het patroon organischer
               gemaakt voor de maakbaarheid in het atelier (M.2/M.8).
+            </p>
+            <p style={{ fontSize: 12, lineHeight: 1.55, marginTop: 10, color: 'var(--ink-soft)', borderTop: '1px solid var(--line-soft)', paddingTop: 10 }}>
+              <strong style={{ color: 'var(--ink)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Keuze sluitingssysteem</strong><br />
+              Rits gekozen boven magneet (te onveilig voor fietsgebruik), gesp (te complex bij één hand), klittenband (slijtage bij dagelijks gebruik) en open top (onveilig). De rits is de meest universele optie: beperktere openingshoek dan een magneet of open top.<br /><br />
+              <strong style={{ color: 'var(--ink)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Haaksysteem → click-systeem</strong><br />
+              Het 3D-geprinte haaksysteem werkte, maar niet universeel (verschilt per lichaamsbouw) en was duurder dan een ingekocht click-systeem. Het compromis: minder volledig eigen ontwerp, maar betrouwbaarder en goedkoper in serieproductie.
             </p>
           </div>
         </div>
@@ -1325,17 +1342,40 @@ const Step23_Prototype4 = () => {
           </p>
 
           <div style={{ marginBottom: 16 }}>
-            <div className="bag-grid-label">Doorgevoerde aanpassingen</div>
+            <div className="bag-grid-label">Doorgevoerde aanpassingen + redenering</div>
             {[
-              { cat: "Hardware", text: "2 straps samengevoegd tot 1 strap, verstelsysteem als integraal onderdeel (A.2)" },
-              { cat: "Hardware", text: "Click-systeem ingekocht ter vervanging van 3D-geprint haaksysteem (F.6/E.4)" },
-              { cat: "Hardware", text: "D ringetje aan voorkant als herkenningspunt (F.3/A.4)" },
-              { cat: "Patroon", text: "Organischer patroon ontworpen met meer foutmarge voor atelier (M.2/M.8)" },
-              { cat: "Inkoop", text: "Onderdelen ingekocht: rits, band, click systeem, lengteclips, D ring" },
+              {
+                cat: "Hardware",
+                text: "2 straps → 1 geïntegreerde strap (A.2)",
+                why: "In v2 en v3 voelde het verstelsysteem steeds als een toevoeging, niet als onderdeel van de tas. Overwogen: (a) koppelstuk behouden is te complex voor atelier; (b) vaste maten S/M/L beperkt universaliteit. Gekozen voor een strap: simpelste constructie, minste onderdelen, past bij ateliereis M.2."
+              },
+              {
+                cat: "Hardware",
+                text: "Click-systeem ingekocht, 3D-print vervangen (F.6/E.4)",
+                why: "Het 3D-geprinte haaksysteem was functioneel maar werkte niet universeel (verschilt per lichaamsbouw) en was duurder. Compromis: minder volledig eigen ontwerp, maar betrouwbaarder en goedkoper in serieproductie."
+              },
+              {
+                cat: "Hardware",
+                text: "D-ring aan voorkant als herkenningspunt (F.3/A.4)",
+                why: "Standaardpositie bij crossbody tassen, herkenbaarheid en gebruiksgemak bij het omschakelen cross↔sling. Geen noemenswaardige alternatieven: dit volgt de conventie in het tassenontwerp."
+              },
+              {
+                cat: "Patroon",
+                text: "Organischer patroon met meer foutmarge (M.2/M.8)",
+                why: "Atelier naaisters hebben wisselende ervaring. Strak patroon verhoogt foutmarge en productietijd. Compromis: iets meer materiaalverspilling per patroon, maar het atelier kan zelfstandiger werken."
+              },
+              {
+                cat: "Inkoop",
+                text: "Rits, band, click-systeem, lengteclips, D-ring ingekocht",
+                why: "Niet uit restmateriaal te produceren. Compromis: het percentage restmateriaal per tas daalt, maar de functionele betrouwbaarheid stijgt. Eis D.1 (min. 70% restmateriaal) wordt nog steeds gehaald."
+              },
             ].map((item, i) => (
-              <div key={i} style={{ display: 'flex', gap: 10, padding: '7px 0', borderBottom: '1px solid var(--line-soft)', alignItems: 'flex-start' }}>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--green)', minWidth: 60, paddingTop: 2, flexShrink: 0 }}>{item.cat}</span>
-                <span style={{ fontSize: 12, lineHeight: 1.55, color: 'var(--ink)' }}>{item.text}</span>
+              <div key={i} style={{ padding: '10px 0', borderBottom: '1px solid var(--line-soft)' }}>
+                <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 4 }}>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--green)', minWidth: 60, paddingTop: 2, flexShrink: 0 }}>{item.cat}</span>
+                  <span style={{ fontSize: 12, lineHeight: 1.55, color: 'var(--ink)', fontWeight: 500 }}>{item.text}</span>
+                </div>
+                <p style={{ fontSize: 11, lineHeight: 1.55, color: 'var(--ink-soft)', margin: '0 0 0 70px' }}>{item.why}</p>
               </div>
             ))}
           </div>
@@ -1647,8 +1687,6 @@ const Step25_DefinitiefPvE = () => {
             </div>
           ))}
 
-          {/* Toetsingstabel — stand van zaken */}
-          <PvEToetsingstabel />
         </div>
 
       </div>
@@ -1668,4 +1706,5 @@ Object.assign(window, {
   Step23_Prototype4,
   Step24_SociaalAtelier,
   Step25_DefinitiefPvE,
+  PvEToetsingstabel,
 });

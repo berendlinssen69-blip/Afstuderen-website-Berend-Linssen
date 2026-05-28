@@ -435,7 +435,7 @@ const PageOnderzoek = () => {
       summary: 'Analyse van alle materialen in de productiestroom van Sit & Heat op hergebruikpotentieel.',
       content: (
         <PdfLink src="Bijlage/Materialen onderzoek.pdf">
-          <p>Analyse van zes materialen uit de productiestroom van Sit &amp; Heat. SDA weefsel scoort het hoogst op hergebruikpotentieel: weerbestendig, kleurecht, naaibaar en in grote hoeveelheden beschikbaar als reststof. Andere materialen zoals fiberfill, PVC-coating en schuim zijn beperkt of niet geschikt voor verwerking in tassen.</p>
+          <p>Analyse van zes materialen uit de productiestroom van Sit &amp; Heat. SDA weefsel scoort het hoogst op hergebruikpotentieel: weerbestendig, kleurecht, naaibaar en in grote hoeveelheden beschikbaar als reststof. Andere materialen zoals fiberfill, PVC coating en schuim zijn beperkt of niet geschikt voor verwerking in tassen.</p>
         </PdfLink>
       ),
     },
@@ -446,7 +446,7 @@ const PageOnderzoek = () => {
       summary: 'Analyse van acht relevante trends in de markt voor duurzame gebruiksproducten.',
       content: (
         <PdfLink src="Bijlage/trend onderzoek.pdf">
-          <p>Acht relevante trends ge&iuml;dentificeerd op basis van deskresearch: circulaire economie, energie-effici&euml;nt comfort, zichtbare duurzaamheid, sociale duurzaamheid, modulariteit, verlenging van het buitenseizoen, transparantie en comfort &amp; zachtheid.</p>
+          <p>Acht relevante trends ge&iuml;dentificeerd op basis van deskresearch: circulaire economie, energie effici&euml;nt comfort, zichtbare duurzaamheid, sociale duurzaamheid, modulariteit, verlenging van het buitenseizoen, transparantie en comfort &amp; zachtheid.</p>
         </PdfLink>
       ),
     },
@@ -457,7 +457,7 @@ const PageOnderzoek = () => {
       summary: 'Analyse van de markt voor softgoods, verwarmde producten en het retaillandschap.',
       content: (
         <PdfLink src="Bijlage/Marktonderzoek.pdf">
-          <p>Gemiddeld 15-30% weefselafval in de Nederlandse maakindustrie. Concurrentieanalyse toont ruimte tussen Stoov (design-first, indoor) en Sit &amp; Heat (functioneel-buitengericht). Freitag als filosofisch precedent: bewijs dat materiaalidentiteit commercieel werkt. Conclusie: er is ruimte voor een tascollectie die de materiaaloorsprong centraal stelt.</p>
+          <p>In de Nederlandse maakindustrie bestaat gemiddeld 15–30% van het gebruikte weefsel uit restmateriaal. De concurrentieanalyse laat daarnaast een duidelijke ruimte in de markt zien tussen Stoov, dat zich vooral richt op design en indoorgebruik, en Sit & Heat, dat juist functioneel en buitengericht is. Freitag fungeerde hierbij als belangrijk precedent. Het merk laat zien dat een sterke materiaalidentiteit ook commercieel kan werken. De conclusie is dat er ruimte is voor een tascollectie waarin de oorsprong en het karakter van het materiaal centraal staan.</p>
         </PdfLink>
       ),
     },

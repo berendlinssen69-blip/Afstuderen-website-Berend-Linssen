@@ -36,7 +36,7 @@ const Step01_OpenVraag = () => {
             Sit &amp; Heat maakt verwarmde kussens en stoelen voor buiten. Een energiezuinig alternatief voor de gasheaters die rond 2008 op elk terras in Nederland stonden.
           </p>
           <p className="wf-body">
-            Na mijn sollicitatie zei Sit &amp; Heat: "Ik zie dat jij in je portfolio veel doet met afvalmateriaal en upcycling, wij hebben hoogwaardige reststoffen die momenteel bij het afval liggen, en we willen daar iets mee."
+            Tijdens de kennismaking benoemde Sit &amp; Heat: "Wij hebben hoogwaardige reststoffen die momenteel bij het afval liggen, en we willen daar iets mee."
           </p>
           <p className="wf-body">
             Dat was het vertrekpunt. Geen uitgewerkte briefing, geen bekend product. Alleen een materiaalstroom waarvan we de omvang, samenstelling en mogelijkheden nog moesten ontdekken en de vraag of daar iets zinvols uit te halen viel.
@@ -73,7 +73,7 @@ const Step02_VraagNaarOpdracht = () => {
           <div className="step-num"><span className="bullet"/>STAP 02 · VAN VRAAG NAAR OPDRACHT</div>
           <h2 className="wf-title">Van open vraag<br/>naar opdracht</h2>
           <p className="wf-body lg">
-            Een vraag als "doe iets met onze reststoffen" is geen opdracht. Om er mee aan de slag te kunnen moest ik eerst begrijpen wat er speelde: welke materialen er waren, wie er bij het project betrokken zouden zijn, en binnen welke randvoorwaarden het eindproduct moest vallen.
+            Een vraag als "doe iets met onze reststoffen" is geen opdracht. Om tot een werkbare opdracht te komen was het essentieel om eerst het speelveld te begrijpen: welke materialen er beschikbaar waren, wie er bij het project betrokken zouden zijn, en binnen welke randvoorwaarden het eindproduct moest vallen.
           </p>
           <p className="wf-body">
             Dat vroeg om een brede, parallelle verkenning. Gesprekken met Jorg over de productie en het materiaal, een stakeholderanalyse voor de betrokken partijen Sit &amp; Heat, het sociale atelier, de opleiding en onderzoek naar de randvoorwaarden vanuit maakbaarheid en duurzaamheid.
@@ -98,7 +98,7 @@ const Step03_PvA = () => {
         <div className="step-content reveal-stagger" style={{maxWidth:"960px", margin:"0 auto"}}>
           <div className="step-num"><span className="bullet"/>STAP 03 · PLAN VAN AANPAK</div>
           <h2 className="wf-title">Wat het Plan van<br/>Aanpak opleverde</h2>
-          <p className="wf-body" style={{marginBottom:16}}>De verkenning mondde uit in een centrale onderzoeksvraag:</p>
+          <p className="wf-body" style={{marginBottom:16}}>De verkenning leidde tot een centrale onderzoeksvraag die de drie kernlagen van de opdracht samenvat: materiaal, productiecontext en marktrelevantie</p>
           <div style={{border:"1px solid var(--line)", padding:28, background:"var(--paper)"}}>
             <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--ink-soft)", marginBottom:14}}>Centrale onderzoeksvraag</div>
             <h2 className="wf-title" style={{fontSize:"clamp(22px, 2.8vw, 38px)"}}>
@@ -161,13 +161,13 @@ const Step04_MethodeCirculariteit = () => {
           <div className="step-num"><span className="bullet"/>STAP 04 · METHODE</div>
           <h2 className="wf-title">Methodische aanpak</h2>
           <p className="wf-body lg">
-            Bij dit project is er gekozen voor de Double Diamond methode maar,de Double Diamond bood alleen structuur op hoofdlijnen, vier fasen van breed verkennen naar concreet opleveren, maar dit project had specifieke uitdagingen. Daarom werd de basiscyclus van Roozenburg &amp; Eekels (1995) toegevoegd als microstructuur: een iteratief systeem van analyse, synthese, simulatie en evaluatie.
+            De keuze voor de Double Diamond als hoofdstructuur was gebaseerd op de vier fasen van breed verkennen naar concreet opleveren. Maar de Double Diamond bood alleen structuur op hoofdlijnen. Dit project had specifieke uitdagingen die om een fijnmaziger systeem vroegen. Daarom is de basiscyclus van Roozenburg &amp; Eekels (1995) toegevoegd als microstructuur: een iteratief systeem van analyse, synthese, simulatie en evaluatie dat per ontwerpbeslissing herhaalbaar is.
           </p>
           <p className="wf-body">
-            De combinatie ontstond niet op papier maar vanuit de opdracht. De materiaalstromen waren onvoorspelbaar en wisselend van samenstelling, en de ontwerpopgave raakte tegelijk het materiaal, de productiecontext van het atelier, de markt en duurzaamheid.
+            De combinatie ontstond niet op papier maar vanuit de opdracht zelf. De materiaalstromen waren onvoorspelbaar en wisselend van samenstelling, en de ontwerpopgave raakte vier domeinen tegelijk: materiaal, productiecontext, markt en duurzaamheid. Geen van de methodes dekte alle vier, de combinatie was noodzakelijk om op elk niveau onderbouwde keuzes te kunnen maken.
           </p>
           <p className="wf-body">
-            Later bleek een derde aanpak nodig: <em>Design by Doing</em>. Donald Schon beschreef in <em>The Reflective Practitioner</em> (1983) hoe ontwerpers kennis opbouwen door te handelen en tegelijkertijd te reflecteren op dat handelen  'reflection in action'. Analytische methodes alleen waren onvoldoende om grip te krijgen op materialen die je pas begrijpt als je ermee werkt. Door zelf te naaien en te experimenteren ontstonden inzichten die geen deskresearch had kunnen opleveren. De keuze voor Design by Doing als leerfase voor het prototypen was mede gebaseerd op het eerder vastgestelde risico op tijdsoverschrijding tijdens het prototypen.
+            Later bleek een derde aanpak nodig: <em>Design by Doing</em>. Donald Schön beschreef in <em>The Reflective Practitioner</em> (1983) hoe ontwerpers kennis opbouwen door te handelen en tegelijkertijd te reflecteren op dat handelen, 'reflection in action'. Analytische methodes alleen waren onvoldoende om grip te krijgen op materialen die pas begrepen worden door ermee te werken. Door direct te naaien en te experimenteren met het restmateriaal ontstonden inzichten die deskresearch niet had kunnen opleveren. De keuze voor Design by Doing als leerfase voor het prototypen was daarnaast gebaseerd op het eerder vastgestelde risico op tijdsoverschrijding: door eerst het materiaalgedrag te leren kennen, werd de prototypefase efficiënter.
           </p>
           <div style={{border:"1px solid var(--line)", padding:14, background:"var(--paper)", marginTop:4, fontSize:13, lineHeight:1.5}}>
             <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:8}}>CIRCULARITEIT ALS UITGANGSPUNT</div>
@@ -199,7 +199,7 @@ const RESEARCHES = [
     n: "01", ttl: "Materiaalonderzoek",
     href: "onderzoek.html?open=materialen",
     meta: "Materiaal · technisch onderzoek",
-    body: ["Voordat er aan een product werd gedacht, moest eerst duidelijk zijn welk restmateriaal er precies beschikbaar was. Het productieproces van Sit & Heat leverde namelijk verschillende materiaalstromen op, elk met hun eigen eigenschappen, hoeveelheden en beperkingen.Het onderzoek bracht de volgende reststromen in kaart: solution dyed acryl buitenstof, fiberfill, PVC/polyester composiettextiel, PE stof, synthetisch skai leer, polyurethaanschuim, stroomkabels, bedieningspanelen, omvormers en lithiumbatterijen. Per materiaal is gekeken naar de samenstelling, de mechanische en functionele eigenschappen, hoe goed het te recyclen of hergebruiken is, en welke toepassingen er al voor bestaan. Voor de solution dyed acryl is daarbij extra ingezoomd op de prestaties: het materiaal is UV bestendig, weerbestendig, slijtvast en wasbaar. “Solution dyed” betekent dat de kleur al in de vezel zit en er niet uit kan lopen, wat in de textielindustrie wordt gezien als een hoogwaardige eigenschap."],
+    body: ["Voordat er aan een product kon worden gedacht, was het noodzakelijk om het beschikbare restmateriaal systematisch in kaart te brengen. Het productieproces van Sit & Heat levert namelijk verschillende materiaalstromen op, elk met eigen eigenschappen, hoeveelheden en beperkingen. Het onderzoek identificeerde de volgende reststromen: solution dyed acryl buitenstof, fiberfill, PVC/polyester composiettextiel, PE stof, synthetisch skai leer, polyurethaanschuim, stroomkabels, bedieningspanelen, omvormers en lithiumbatterijen. Per materiaal is gekeken naar de samenstelling, de mechanische en functionele eigenschappen, de geschiktheid voor recycling of hergebruik, en bestaande toepassingen. Voor de solution dyed acryl is daarbij extra ingezoomd op de prestaties: het materiaal is UV-bestendig, weerbestendig, slijtvast en wasbaar. 'Solution dyed' betekent dat de kleur al in de vezel zit en er niet uit kan lopen. In de textielindustrie is dit een hoogwaardige eigenschap."],
     opl: [
       ["Reststromen in kaart", "Solution dyed acrylic buitenstof, fiberfill, PVC/polyester composiettextiel, PE fabric, synthetisch skai-leer, polyurethaanschuim, stroomkabels, bedieningspanelen, omvormers en lithiumbatterijen."],
       ["Per materiaal onderzocht", "Chemische samenstelling, mechanische en functionele eigenschappen, verhouding tot recycling en hergebruik, bestaande toepassingen in de praktijk."],
@@ -251,7 +251,7 @@ const RESEARCHES = [
     n: "03", ttl: "Trendonderzoek",
     href: "onderzoek.html?open=trends",
     meta: "Trend · 8 trends geanalyseerd",
-    body: ["Om de ontwerpopgave in een bredere context te plaatsen is onderzocht welke trends relevant zijn voor zowel Sit & Heat als het restmateriaalvraagstuk. Daarbij zijn acht trends geïdentificeerd. Een belangrijke trend is dat reststromen steeds vaker worden gezien als grondstof in plaats van afval. Tegelijkertijd is duurzaamheid niet langer een extra keuze, maar een basisvereiste. Dit sluit direct aan op de kern van de opdracht en op de principes van het circulaire systeem van de Ellen MacArthur Foundation. Daarnaast laat de trend van zichtbare duurzaamheid zien dat variatie in materialen niet per se een nadeel is. Authenticiteit, zichtbare stiksels en het verhaal achter een product worden juist steeds meer gewaardeerd. Dat is relevant, omdat de reststromen van Sit & Heat per definitie variëren. Ook het ontwerpen voor sociale ateliers past binnen een bredere ontwikkeling richting inclusieve werkgelegenheid. Tot slot bevestigt de Horecava 2026-trendrapportage de blijvende relevantie van het bestaande product van Sit & Heat binnen de markt."],
+    body: ["Om de ontwerpopgave in een bredere context te plaatsen is onderzocht welke trends relevant zijn voor zowel Sit & Heat als het restmateriaalvraagstuk. Daarbij zijn acht trends geïdentificeerd. Een belangrijke trend is dat reststromen steeds vaker worden gezien als grondstof in plaats van afval. Tegelijkertijd is duurzaamheid niet langer een extra keuze, maar een basisvereiste. Dit sluit direct aan op de kern van de opdracht en op de principes van het circulaire systeem van de Ellen MacArthur Foundation. Daarnaast laat de trend van zichtbare duurzaamheid zien dat variatie in materialen niet per se een nadeel is. Authenticiteit, zichtbare stiksels en het verhaal achter een product worden juist steeds meer gewaardeerd. Dat is relevant, omdat de reststromen van Sit & Heat per definitie variëren. Ook het ontwerpen voor sociale ateliers past binnen een bredere ontwikkeling richting inclusieve werkgelegenheid. Tot slot bevestigt de Horecava 2026 trendrapportage de blijvende relevantie van het bestaande product van Sit & Heat binnen de markt."],
     opl: [
       ["Circulaire economie", "Reststromen worden in toenemende mate gezien als grondstof in plaats van afval. Duurzaamheid ontwikkelt zich van extra keuze naar basisvoorwaarde."],
       ["Zichtbare duurzaamheid", "Variatie in restmateriaal hoeft geen probleem te zijn, authenticiteit, zichtbare stiksels en materiaalverhalen worden soms juist gewaardeerd."],
@@ -304,7 +304,7 @@ const RESEARCHES = [
     n: "05", ttl: "Stakeholderanalyse",
     href: "onderzoek.html?open=risico",
     meta: "Stakeholders · primair + secundair",
-    body: ["Om te begrijpen binnen welke context het ontwerp moest landen, werden alle betrokken partijen in kaart gebracht op rol en invloed.", "Primair: Sit & Heat als opdrachtgever en materiaalexpert, het sociale atelier als toekomstige productiepartner, en de eindgebruiker. Als ontwerper had ik een uitvoerende en verbindende rol.", "Sit & Heat bepaalde de randvoorwaarden rond duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de complexiteit: eenvoudige constructies, herhaalbare handelingen. De eindgebruiker vroeg om een product dat functioneel en relevant is. Al die belangen moesten in het ontwerp samenkomen."],
+    body: ["Om te begrijpen binnen welke context het ontwerp moest landen, zijn alle betrokken partijen in kaart gebracht op rol en invloed.", "Primair: Sit & Heat als opdrachtgever en materiaalexpert, het sociale atelier als toekomstige productiepartner, en de eindgebruiker. De ontwerprol was uitvoerend én verbindend: het samenbrengen van belangen die niet vanzelf op één lijn lagen.", "Sit & Heat bepaalde de randvoorwaarden rond duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de complexiteit: eenvoudige constructies, herhaalbare handelingen. De eindgebruiker vroeg om een product dat functioneel en relevant is. Die eisen hebben vaker draagvlak, dat spanningsveld is een rode draad door het hele ontwerpproces."],
     opl: [
       ["Primaire stakeholders", "Sit & Heat als opdrachtgever, materiaalexpert en projectbegeleider in een. Het sociale atelier als toekomstige productiepartner. De eindgebruiker van het te ontwikkelen product."],
       ["Interface stakeholder", "De afstudeerstudent: uitvoerend en verbindend tussen alle partijen."],
@@ -388,7 +388,7 @@ const ResearchSection = () => {
         <div className="step-num"><span className="bullet"/>STAP 05 · ONDERZOEK</div>
         <h2 className="wf-title">Vijf onderzoeken,<br/><span style={{color:"var(--green)"}}>een basis</span> voor het PvE.</h2>
         <p className="wf-body lg">
-          Voordat er een product kon worden ontwikkeld, moest eerst duidelijk worden wat de mogelijkheden en beperkingen waren. Daarom zijn vijf onderzoeken uitgevoerd, elk gericht op een ander onderdeel van de opdracht. Samen vormden deze onderzoeken de basis voor de keuzes die daarna zijn gemaakt, van materiaal en markt tot trends, inventarisatie en stakeholders.
+          Voordat er een product kon worden ontwikkeld, moest eerst duidelijk worden wat de mogelijkheden en beperkingen waren. De vijf onderzoeken zijn bewust gekozen om elk een andere laag van de opdracht te benoemen: materiaal (wat is er?), markt (waar past het?), trends (waarom nu?), inventarisatie (hoeveel is er?) en stakeholders (voor wie?). Samen leverden deze onderzoeken het feitelijk kader voor alle ontwerpkeuzes die daarna volgden.
         </p>
       </div>
       <div className="r-stack">
@@ -503,7 +503,7 @@ const Step06_VoorlopigPvE = () => {
           <div className="step-num"><span className="bullet"/>STAP 06 · VOORLOPIG PvE</div>
           <h2 className="wf-title">Voorlopig programma<br/>van eisen</h2>
           <p className="wf-body lg">
-            Na het afronden van alle analyses werd een <strong>voorlopig</strong> PvE opgesteld Dat er bewust nog geen vaste productcategorie is gekozen. Dit is een tussenproduct, later in het project wordt een definitief PvE opgesteld op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
+            Na het afronden van alle analyses is een <strong>voorlopig</strong> PvE opgesteld (bewust zonder vaste productcategorie). De reden: op dit punt in het proces was nog niet besloten wát er gemaakt zou worden, alleen wááraan het moest voldoen. Het voorlopige PvE functioneerde daarmee als toetsingsinstrument voor de brainstorm- en keuzefase. Later in het project volgt een definitief PvE op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
           </p>
           <ul style={{listStyle:"none", display:"flex", flexDirection:"column", gap:6, marginTop:8}}>
             {[
@@ -575,10 +575,10 @@ const Step09_StructurerenIdeeen = () => {
           <div className="step-num"><span className="bullet"/>STAP 09 · 9 RICHTINGEN</div>
           <h2 className="wf-title">Van ideeën naar geordende richtingen.</h2>
           <p className="wf-body lg">
-            Na de sessie nam ik de gefilterde ideeën mee en begon zelf met groeperen.
-            De ideeën werden gecategoriseerd op markt: B2B horeca, B2C, en B2B + B2C.
-            Vervolgens ingedeeld in productlijnen zoals decoratie, zitopties, horeca voorwerpen,
-            beschermhoezen, schorten en sport.
+            Na de brainstormsessie zijn de gefilterde ideeën individueel verder gegroepeerd.
+            De categorisatie volgde twee assen: eerst op markt (B2B horeca, B2C, en B2B + B2C),
+            vervolgens op productlijn (decoratie, zitopties, horeca-voorwerpen,
+            beschermhoezen, schorten en sport). Deze structuur maakte het mogelijk om per cluster de haalbaarheid te beoordelen.
           </p>
           <p className="wf-body lg">
              Kleurcodering geeft aan voor welke markt het idee geschikt is.
@@ -642,7 +642,7 @@ const Step09_StructurerenIdeeen = () => {
 
           {/* Experimentatie tekst */}
           <div style={{marginTop:28, padding:"16px", background:"var(--paper)", border:"1px solid var(--line-soft)", fontFamily:"var(--sans)", fontSize:14, lineHeight:1.6, color:"var(--ink)"}}>
-            Na het groeperen ben ik begonnen met experimentatie en exploratie van ideeën, dit heb ik gedaan binnen de 3 meest winstgevende groepen (Horeca items, tassen, zit opties) deze richtingen zijn samen met Sit &amp; Heat bepaald.
+            Na het groeperen volgde experimentatie en exploratie binnen de drie meest kansrijke clusters (horeca-items, tassen, zitopties). De keuze voor deze drie richtingen is in overleg met Sit &amp; Heat bepaald op basis van geschat marktpotentieel en materiaalbenutting.
           </div>
         </div>
       </div>
@@ -764,7 +764,7 @@ const Step11_NaaienExploratie = () => {
         </div>
         <div className="step-content reveal-stagger" style={{background:"rgba(255,255,255,0.92)", padding:28}}>
           <div className="step-num"><span className="bullet"/>STAP 11 · DESIGN BY DOING</div>
-          <h2 className="wf-title">Pas door te doen,<br/>begreep ik het materiaal.</h2>
+          <h2 className="wf-title">Pas door te doen,<br/>werd het materiaal begrepen.</h2>
           <p className="wf-body lg">
             Nul ervaring achter een naaimachine. Toch werd begonnen met het zelf maken
             van kleine items in het restmateriaal. Geen prototypes. Gewoon leren.
@@ -775,15 +775,15 @@ const Step11_NaaienExploratie = () => {
             handelingen, en waar je vastloopt zonder geavanceerde machines.
           </p>
           <p className="wf-body">
-            Later moest er ook een atelier-handleiding komen. Om die te kunnen schrijven,
-            moest ik eerst begrijpen wat die handelingen precies inhouden.
+            Later moest er ook een atelier handleiding komen. Om die te kunnen schrijven,
+            was het noodzakelijk om eerst te begrijpen wat die handelingen precies inhouden, kennis die alleen door zelf te maken ontstaat.
           </p>
           <div className="sew-grid">
             {[
               ["NAAIPROEF 01","Enkellaags","Werkt niet. Rafelt na twee weken"],
               ["NAAIPROEF 02","Dubbellaags + aflock","Werkt. Opgenomen in handleiding"],
-              ["NAAIPROEF 03","Patchwork-blok","Werkt. Makkelijk te maken, maar rafelt aan de randen"],
-              ["NAAIPROEF 04","Plooi-vouw","Werkt deels. Niet voor curve-naden"],
+              ["NAAIPROEF 03","Patchwork blok","Werkt. Makkelijk te maken, maar rafelt aan de randen"],
+              ["NAAIPROEF 04","Plooi vouw","Werkt deels. Niet voor curve-naden"],
               ["NAAIPROEF 05","Gevouwen handvat","Werkt. Atelier vriendelijk"],
               ["NAAIPROEF 06","Elastische sluiting","Werkt niet. Geen rek in materiaal"],
             ].map(([h,t,d],i)=>(
@@ -1187,26 +1187,38 @@ const Step18_Verantwoording = () => {
             <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:10}}>
               {[
                 ["DV 1", "Welke eigenschappen, volumes en variaties hebben de beschikbare restmaterialen?",
-                  "SDA-weefsel domineert de reststroom (~78 kg/maand). Weerbestendig, kleurecht, 7 kleurgroepen. Volledig gedocumenteerd in materiaalinventarisatie. Andere materialen (schuim, baterijen, PVC) zijn niet geschikt voor tassen."],
+                  "SDA-weefsel domineert de reststroom (~78 kg/maand). Weerbestendig, kleurecht, 7 kleurgroepen. Volledig gedocumenteerd in materiaalinventarisatie. Andere materialen (schuim, batterijen, PVC) zijn niet geschikt voor tassen.",
+                  "Beperking: de inventarisatie is een momentopname. De voorraad varieert per productiesprint, kleurgroepen en volumes zijn niet stabiel voorspelbaar."],
                 ["DV 2", "Welke productcategorieën zijn geschikt voor circulaire soft goods?",
-                  "Tassen scoren het hoogst in de keuzematrix: hoge materiaalbehoefte, marktwaarde en atelierhaalbaarheid. Aangetoond via brainstorm (>100 ideeën), clustering en vormonderzoek."],
+                  "Tassen scoren het hoogst in de keuzematrix: hoge materiaalbehoefte, marktwaarde en atelierhaalbaarheid. Aangetoond via brainstorm (>100 ideeën), clustering en vormonderzoek.",
+                  "Beperking: de keuzematrix is gebaseerd op expert inschatting, niet op marktonderzoek per categorie. Horeca accessoires zijn afgevallen mede op basis van een gesprek met Roel (sales)."],
                 ["DV 3", "Welke technische randvoorwaarden gelden binnen het atelier?",
-                  "Max 10 lagen stof, standaard naaimachines, 1 cm naadwaarde, geen gespecialiseerde hardware. Vastgelegd in PvE categorieën M.1–M.6."],
+                  "Max 10 lagen stof, standaard naaimachines, 1 cm naadwaarde, geen gespecialiseerde hardware. Vastgelegd in PvE categorieën M.1–M.6.",
+                  "Beperking: de ateliereisen zijn gebaseerd op een oriënterend bezoek aan Blueview Apeldoorn. Validatie via een volledige productierun volgt in juni 2026."],
                 ["DV 4", "Welke concepten zijn produceerbaar met wisselend materiaal?",
-                  "Drie tasvarianten met een basispatroon plus een patchwork optie voor kleine restlappen. Kleurvariatie is een toevoeging, geen probleem (Freitag-model)."],
+                  "Drie tasvarianten met een basispatroon plus een patchwork optie voor kleine restlappen. Kleurvariatie is een toevoeging, geen probleem (Freitag-model).",
+                  "Beperking: het patchwork patroon is nog niet getest in het atelier. De productietijd per tas is daarvoor nog onbekend."],
                 ["DV 5", "Welke beperkingen gelden binnen de productie?",
-                  "Beperkte atelieruren, wisselende materiaalvlakken, geen industriële machines. Opgelost via eenvoudig patroonsysteem en productiehandleiding (in ontwikkeling)."],
+                  "Beperkte atelieruren, wisselende materiaalvlakken, geen industriële machines. Opgelost via eenvoudig patroonsysteem en productiehandleiding (in ontwikkeling).",
+                  "Beperking: de productiehandleiding is nog niet af. De werkelijke maakbaarheid is daarmee nog niet volledig gevalideerd."],
                 ["DV 6", "Welke duurzaamheidstrends beïnvloeden de opgave?",
-                  "Circulaire economie, zichtbare duurzaamheid en sociale impact zijn de drie dominante trends. De tas scoort op alle drie: het materiaalverhaal is zichtbaar en communiceerbaar."],
+                  "Circulaire economie, zichtbare duurzaamheid en sociale impact zijn de drie dominante trends. De tas scoort op alle drie: het materiaalverhaal is zichtbaar en communiceerbaar.",
+                  "Beperking: trendanalyse is desk research, geen primaire bronnen of consumentenonderzoek. De vertaling van trend naar koopbereidheid is niet empirisch getoetst."],
                 ["DV 7", "Naar welke producten is er vraag in de doelgroep?",
-                  "Actieve stadsbewoners, 20–50 jaar, €60–€100 budget. Bevestigd via Henri interview 1 (marktverkenning)."],
+                  "Actieve stadsbewoners, 20–50 jaar, €60–€100 budget. Bevestigd via Henri interview 1 (marktverkenning).",
+                  "Beperking: doelgroep is gevalideerd via één retailer in Nijmegen. Bredere doelgroepvalidatie (gebruikerstest) volgt in juni 2026."],
                 ["DV 8", "Hoe verhouden de concepten zich tot kostprijs, duurzaamheidsimpact en verkoopprijs?",
-                  "~€28 inkoopprijs, €70 verkoopprijs. ~53 tassen/maand uit huidige reststroom. ~874 kg CO₂e vermeden per maand. Volledig uitgewerkt in stap 27 (harde cijfers)."],
-              ].map(([k, vraag, antwoord], i) => (
+                  "~€28 inkoopprijs, €70 verkoopprijs. ~53 tassen/maand uit huidige reststroom. ~874 kg CO₂e vermeden per maand. Volledig uitgewerkt in stap 27 (harde cijfers).",
+                  "Beperking: de kostprijsberekening is gedeeltelijk gebaseerd op schattingen. De CO₂-berekening volgt de Higg MSI methodiek met aannames voor transportafstand."],
+              ].map(([k, vraag, antwoord, beperking], i) => (
                 <div key={i} style={{border:"1px solid var(--line)", padding:14, background:"var(--paper)"}}>
                   <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>{k}</div>
                   <p style={{fontSize:11, lineHeight:1.5, color:"var(--ink-soft)", marginBottom:8, fontStyle:"italic"}}>{vraag}</p>
-                  <p style={{fontSize:13, lineHeight:1.55, color:"var(--ink)"}}>{antwoord}</p>
+                  <p style={{fontSize:13, lineHeight:1.55, color:"var(--ink)", marginBottom:8}}>{antwoord}</p>
+                  <p style={{fontSize:11, lineHeight:1.5, color:"var(--ink-soft)", borderTop:"1px solid var(--fill-2)", paddingTop:8, margin:0}}>
+                    <span style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.1em", textTransform:"uppercase", color:"var(--ink-mute)"}}>Beperking · </span>
+                    {beperking}
+                  </p>
                 </div>
               ))}
             </div>
@@ -1245,6 +1257,9 @@ const Step18_Verantwoording = () => {
               ))}
             </div>
           </div>
+          {/* Toetsingstabel — stand van zaken */}
+          {(() => { const T = window.PvEToetsingstabel; return T ? <T /> : null; })()}
+
           <div style={{clear:"both"}} />
         </div>
       </div>
@@ -1585,7 +1600,7 @@ const Outro = () => (
             week:"Week 1",
             pve:"F.1 · F.3 · F.4 · F.5 · M.3 · O.2",
             title:"Prototype v4 afronden en keuren",
-            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het PvE: laagentelling, laptopruimte meten, riemlengte controleren, 45°-kanteltest uitvoeren. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een kleine v4.1 nodig? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
+            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het PvE: laagentelling, laptopruimte meten, riemlengte controleren, 45° kanteltest uitvoeren. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een kleine v4.1 nodig? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
           },
           {
             num:"02",
@@ -1613,7 +1628,7 @@ const Outro = () => (
             week:"Week 4",
             pve:"F.5 · F.6 · F.7 · F.8 · F.12 · A.3",
             title:"Gebruikerstesten",
-            body:"De tas wordt door minimaal drie personen getest: 45°-kanteltest (F.5), sluiting in max. 5 seconden (F.6), rits drie keer heen-terug (F.7). Daarnaast een week dagelijks gebruik door de ontwerper: fiets, stad, terras. Draagcomfort, click-systeem en stabiliteit worden gedocumenteerd. Tegelijk: promotie­foto's en korte video voor de presentatie."
+            body:"De tas wordt door minimaal drie personen getest: 45° kanteltest (F.5), sluiting in max. 5 seconden (F.6), rits drie keer heen en terug (F.7). Daarnaast een week dagelijks gebruik door de ontwerper: fiets, stad, terras. Draagcomfort, click systeem en stabiliteit worden gedocumenteerd. Tegelijk: promotie ­foto's en korte video voor de presentatie."
           },
           {
             num:"06",
