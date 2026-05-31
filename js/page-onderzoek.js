@@ -130,7 +130,6 @@ const SketchbookGroup = ({ title, count, children }) => {
           </svg>
           <div className="sb-group-title">{title}</div>
         </div>
-        <div className="sb-group-count">{count} {count === 1 ? 'sectie' : 'secties'}</div>
       </div>
       <div className="sb-group-content" style={{ maxHeight: open ? '9999px' : '0px' }}>
         <div style={{ paddingBottom: 8 }}>{children}</div>
