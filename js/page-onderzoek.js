@@ -93,6 +93,20 @@
       border-bottom: 1px solid var(--line);
     }
     .bron-cat:first-child { margin-top: 0; }
+
+    /* Schetsboek collapsible groups */
+    .sb-group { border-top: 1px solid var(--line); }
+    .sb-group-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 0; cursor: pointer; user-select: none; transition: opacity .15s;
+    }
+    .sb-group-header:hover { opacity: 0.65; }
+    .sb-group-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ink); }
+    .sb-group-count { font-family: var(--mono); font-size: 9px; color: var(--ink-soft); letter-spacing: 0.1em; }
+    .sb-group-chev { transition: transform 0.25s var(--ease-standard); color: var(--ink-soft); margin-right: 10px; }
+    .sb-group-chev.open { transform: rotate(180deg); }
+    .sb-group-content { overflow: hidden; transition: max-height 0.45s var(--ease-out); }
   `;
   document.head.appendChild(s);
 })();
@@ -104,6 +118,27 @@ const ChevronDown = ({ open }) => (
   </svg>
 );
 
+/* ── Schetsboek collapsible group ───────────────────────────────────── */
+const SketchbookGroup = ({ title, count, children }) => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div className="sb-group">
+      <div className="sb-group-header" onClick={() => setOpen(o => !o)}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <svg className={`sb-group-chev${open ? ' open' : ''}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+          <div className="sb-group-title">{title}</div>
+        </div>
+        <div className="sb-group-count">{count} {count === 1 ? 'sectie' : 'secties'}</div>
+      </div>
+      <div className="sb-group-content" style={{ maxHeight: open ? '9999px' : '0px' }}>
+        <div style={{ paddingBottom: 8 }}>{children}</div>
+      </div>
+    </div>
+  );
+};
+
 /* ── Accordion card ─────────────────────────────────────────────────── */
 const AccCard = ({ icon, title, summary, defaultOpen, children }) => {
   const [open, setOpen] = React.useState(defaultOpen || false);
@@ -114,8 +149,17 @@ const AccCard = ({ icon, title, summary, defaultOpen, children }) => {
   React.useEffect(() => {
     if (open && contentRef.current) {
       setHeight(contentRef.current.scrollHeight + 'px');
+      /* Na animatie maxHeight opheffen zodat inner accordeons niet afgeknipt worden */
+      const t = setTimeout(() => setHeight('none'), 460);
+      return () => clearTimeout(t);
     } else {
-      setHeight('0px');
+      /* Bij sluiten eerst terug naar px zodat de close-animatie werkt */
+      if (contentRef.current && height === 'none') {
+        setHeight(contentRef.current.scrollHeight + 'px');
+        requestAnimationFrame(() => requestAnimationFrame(() => setHeight('0px')));
+      } else {
+        setHeight('0px');
+      }
     }
   }, [open]);
 
@@ -462,6 +506,17 @@ const PageOnderzoek = () => {
       ),
     },
     {
+      slug: 'brainstorm',
+      icon: <IconFileText />,
+      title: 'Brainstorm Presentatie',
+      summary: 'De volledige briefing die voorafgaand aan de brainstormsessie is gegeven aan de deelnemers.',
+      content: (
+        <PdfLink src="Bijlage/Brainstorm_Presentatie.pdf">
+          <p>De presentatie waarmee de brainstormdeelnemers werden gebrieft. Bevat: probleemstelling, beschikbare materialen en hun eigenschappen, concurrentie-analyse, zes relevante markttrends, inspiratie (Freitag als referentie), ontwerpcriteria (moet/mag niet/wens) en de centrale vraag. Deze gestructureerde briefing zorgde ervoor dat alle deelnemers vanuit dezelfde kennisbasis konden brainstormen.</p>
+        </PdfLink>
+      ),
+    },
+    {
       slug: 'risico',
       icon: <IconAlertTriangle />,
       title: 'Risicoanalyse',
@@ -552,47 +607,48 @@ const PageOnderzoek = () => {
             Een overzicht van alle schetsen en foto's uit het ontwerpproces. Klik op een afbeelding om te vergroten.
           </p>
 
-          <div className="gallery-section-label">Brainstorm · Crazy 8s schetsen</div>
-          <GalleryGrid images={CRAZY8S_IMGS} />
+          <SketchbookGroup title="Brainstorm" count={5}>
+            <div className="gallery-section-label">Crazy 8s schetsen</div>
+            <GalleryGrid images={CRAZY8S_IMGS} />
+            <div className="gallery-section-label">Crazy 8s sessie</div>
+            <GalleryGrid images={BRAIN_CRAZY8S_IMGS} />
+            <div className="gallery-section-label">446 Brainwriting schetsen</div>
+            <GalleryGrid images={BW446_IMGS} />
+            <div className="gallery-section-label">446 Brainwriting sessie</div>
+            <GalleryGrid images={BRAIN_BW446_IMGS} />
+            <div className="gallery-section-label">Sessie foto's</div>
+            <GalleryGrid images={BRAINSTORM_SESSION_IMGS} landscape={true} />
+          </SketchbookGroup>
 
-          <div className="gallery-section-label">Brainstorm · Crazy 8s sessie</div>
-          <GalleryGrid images={BRAIN_CRAZY8S_IMGS} />
+          <SketchbookGroup title="Schetsen &amp; Vormverkenning" count={2}>
+            <div className="gallery-section-label">Tas schetsen</div>
+            <GalleryGrid images={TASSCHETSEN_IMGS} />
+            <div className="gallery-section-label">Vormonderzoek</div>
+            <GalleryGrid images={VORMONDERZOEK_IMGS} landscape={true} />
+          </SketchbookGroup>
 
-          <div className="gallery-section-label">Brainstorm · 446 Brainwriting schetsen</div>
-          <GalleryGrid images={BW446_IMGS} />
+          <SketchbookGroup title="Design by Doing" count={1}>
+            <div className="gallery-section-label">Leren naaien</div>
+            <GalleryGrid images={DBD_IMGS} landscape={true} />
+          </SketchbookGroup>
 
-          <div className="gallery-section-label">Brainstorm · 446 Brainwriting sessie</div>
-          <GalleryGrid images={BRAIN_BW446_IMGS} />
+          <SketchbookGroup title="Prototypes" count={5}>
+            <div className="gallery-section-label">Spugmodellen</div>
+            <GalleryGrid images={SPUG_IMGS} landscape={true} />
+            <div className="gallery-section-label">Prototype v1</div>
+            <GalleryGrid images={PROTO1_IMGS} />
+            <div className="gallery-section-label">Prototype v2</div>
+            <GalleryGrid images={PROTO2_IMGS} landscape={true} />
+            <div className="gallery-section-label">Prototype v3</div>
+            <GalleryGrid images={PROTO3_IMGS} landscape={true} />
+            <div className="gallery-section-label">Prototype v4</div>
+            <GalleryGrid images={PROTO4_IMGS} landscape={true} />
+          </SketchbookGroup>
 
-          <div className="gallery-section-label">Brainstorm · Sessie foto's</div>
-          <GalleryGrid images={BRAINSTORM_SESSION_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Vormverkenning · Tas schetsen</div>
-          <GalleryGrid images={TASSCHETSEN_IMGS} />
-
-          <div className="gallery-section-label">Design by Doing · Leren naaien</div>
-          <GalleryGrid images={DBD_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Prototypes · Spugmodellen</div>
-          <GalleryGrid images={SPUG_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Prototype v1</div>
-          <GalleryGrid images={PROTO1_IMGS} />
-
-          <div className="gallery-section-label">Prototype v2</div>
-          <GalleryGrid images={PROTO2_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Prototype v3</div>
-          <GalleryGrid images={PROTO3_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Prototype v4</div>
-          <GalleryGrid images={PROTO4_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Vormonderzoek</div>
-          <GalleryGrid images={VORMONDERZOEK_IMGS} landscape={true} />
-
-          <div className="gallery-section-label">Renders · Multiview</div>
-          <GalleryGrid images={MULTIVIEW_IMGS} landscape={true} />
+          <SketchbookGroup title="Renders" count={1}>
+            <div className="gallery-section-label">Multiview</div>
+            <GalleryGrid images={MULTIVIEW_IMGS} landscape={true} />
+          </SketchbookGroup>
         </div>
       ),
     },
@@ -609,11 +665,14 @@ const PageOnderzoek = () => {
           <div className="bron-item">Knapp, J., Zeratsky, J. &amp; Kowitz, B. (2016). <em>Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days.</em> New York: Simon &amp; Schuster. [Crazy 8s methode]</div>
           <div className="bron-item">Rohrbach, B. (1969). Kreativ nach Regeln – Methode 635, eine neue Technik zum Lösen von Problemen. <em>Absatzwirtschaft, 12</em>(19), pp. 73–75. [446 / 635 Brainwriting methode]</div>
           <div className="bron-item">Dilts, R.B. (1994). <em>Strategies of Genius, Volume I.</em> Capitola: Meta Publications. [Disney Creative Strategy / Disney Model]</div>
+          <div className="bron-item">Schön, D.A. (1983). <em>The Reflective Practitioner: How Professionals Think In Action.</em> New York: Basic Books. [Reflectief ontwerpen]</div>
 
           <div className="bron-cat">Materiaalonderzoek &amp; Duurzaamheid</div>
           <div className="bron-item">Selvane.co. Carbon Footprint of Natural vs. Synthetic Fibers: A Life Cycle Assessment Comparison. Geraadpleegd mei 2026. selvane.co/blogs/knowledge/carbon-footprint-of-natural-vs-synthetic-fibers-a-life-cycle-assessment-comparison [ADEME database, 21,1 kgCO₂e/kg acrylvezel]</div>
           <div className="bron-item">Vade, V.B. &amp; Athalye, A. (2025). Climate Impact Measurement of Acrylic Manufacturing Unit. <em>Chemical and Biomolecular Engineering, 10</em>(3), pp. 37–43. doi:10.11648/j.cbe.20251003.11</div>
           <div className="bron-item">Recycling Nederland. Nieuwe kleding maken uit oud textiel gebeurt mondjesmaat. Geraadpleegd mei 2026. recyclingnederland.nl/artikelen/nieuwe-kleding-maken-uit-oud-textiel-gebeurt-mondjesmaat/</div>
+          <div className="bron-item">Potting, J., Hekkert, M., Worrell, E. &amp; Hanemaaijer, A. (2017). <em>Circulaire economie: Innovatie meten in de keten.</em> Den Haag: PBL Planbureau voor de Leefomgeving. [R-strategiehiërarchie — circulaire waardebehoud]</div>
+          <div className="bron-item">Ellen MacArthur Foundation (2013). <em>Towards the Circular Economy, Vol. 1.</em> Cowes: Ellen MacArthur Foundation. [Circulaire economie — definitie en principes]</div>
 
           <div className="bron-cat">Marktonderzoek &amp; Trends</div>
           <div className="bron-item">CBS Statline (2024). Afvalproductie industrie per branche. Centraal Bureau voor de Statistiek. [15–30% weefselafval in Nederlandse maakindustrie]</div>
@@ -621,12 +680,15 @@ const PageOnderzoek = () => {
           <div className="bron-item">Stoov. Productlijn verwarmde accessoires. stoov.com [Concurrentieanalyse]</div>
 
           <div className="bron-cat">Visueel Onderzoek &amp; Inspiratie</div>
-          <div className="bron-item">Linssen, B. (2026). <em>Sit and Heat restproducten</em> [Pinterest board]. Geraadpleegd april–mei 2026. <a href="https://nl.pinterest.com/bilinssen/sit-and-heat-restproducten/?request_params=%7B%221%22%3A%20130%2C%20%227%22%3A%204155794821323821034%2C%20%228%22%3A%201072630904940932949%2C%20%2230%22%3A%20%22Sit%20and%20Heat%20restproducten%22%2C%20%2232%22%3A%2045%2C%20%2233%22%3A%20%5B1072630836269373639%2C%201072630836269373636%2C%201072630836269344915%2C%201072630836269343479%2C%201072630836269343244%2C%201072630836269343227%2C%201072630836269341099%2C%201072630836269283401%2C%201072630836269281962%2C%201072630836269281410%2C%201072630836269281026%2C%201072630836269281025%2C%201072630836269075953%2C%201072630836269075914%2C%201072630836269075913%2C%201072630836269075885%2C%201072630836269075872%2C%201072630836269075776%2C%201072630836269049837%2C%201072630836269048344%5D%2C%20%2236%22%3A%20%5B1072630904940932949%5D%2C%20%2237%22%3A%20%22Sit%20and%20Heat%20restproducten%22%2C%20%2234%22%3A%200%2C%20%22102%22%3A%204%7D&full_feed_title=Sit%20and%20Heat%20restproducten&view_parameter_type=3069&pins_display=3" target="_blank" rel="noopener noreferrer" style={{color:'#8DB462'}}>nl.pinterest.com/bilinssen/sit-and-heat-restproducten</a></div>
+          <div className="bron-item">Linssen, B. (2026). <em>Sit and Heat restproducten</em> [Pinterest board]. Geraadpleegd april–mei 2026. <a href="https://nl.pinterest.com/bilinssen/sit-and-heat-restproducten/?request_params=%7B%221%22%3A%20130%2C%20%227%22%3A%204155794821323821034%2C%20%228%22%3A%201072630904940932949%2C%20%2230%22%3A%20%22Sit%20and%20Heat%20restproducten%22%2C%20%2232%22%3A%2045%2C%20%2233%22%3A%20%5B1072630836269373639%2C%201072630836269373636%2C%201072630836269344915%2C%201072630836269343479%2C%201072630836269343244%2C%201072630836269343227%2C%201072630836269341099%2C%201072630836269283401%2C%201072630836269281962%2C%201072630836269281410%2C%201072630836269281026%2C%201072630836269281025%2C%201072630836269075953%2C%201072630836269075914%2C%201072630836269075913%2C%201072630836269075885%2C%201072630836269075872%2C%201072630836269075776%2C%201072630836269049837%2C%201072630836269048344%5D%2C%20%2236%22%3A%20%5B1072630904940932949%5D%2C%20%2237%22%3A%20%22Sit%20and%20Heat%20restproducten%22%2C%20%2234%22%3A%200%2C%20%22102%22%3A%204%7D&full_feed_title=Sit%20and%20Heat%20restproducten&view_parameter_type=3069&pins_display=3" target="_blank" rel="noopener noreferrer" style={{color:'#8DB462', textDecoration:'underline'}}>nl.pinterest.com/bilinssen/sit-and-heat-restproducten</a></div>
 
           <div className="bron-cat">Interviews &amp; Primaire bronnen</div>
           <div className="bron-item">Jorg (Sit &amp; Heat). Gesprekken over materiaalstroom, productie en randvoorwaarden. Februari–mei 2026. [Materiaaldata, technische eisen]</div>
           <div className="bron-item">Henri (retailer). Interview 1: prijsindicatie en marktpositie, 2025. Interview 2: feedback prototype v3, april 2026. [Retailmarge 2,5×, doelgroep inzichten]</div>
           <div className="bron-item">Roel (Blueview Sociaal Atelier Apeldoorn). Interview over productiecapaciteit, ateliertarieven en haalbaarheid. Mei 2026. [Productieeisen, maakbaarheid]</div>
+
+          <div className="bron-cat">Gebruik van AI</div>
+          <div className="bron-item">Claude (Anthropic, 2025–2026). Ingezet als ondersteuning bij: bronnenonderzoek en literatuursynthese; tekstredactie en formulering van verslagteksten; structurering en opbouw van het interactieve verslag; schrijven van code voor de website (JavaScript/React); voorbereiding van reflectiemomenten als conceptteksten. AI is gebruikt als denk- en redactiehulpmiddel — alle inhoudelijke keuzes, waardeoordelen en ontwerpbeslissingen zijn van de ontwerper zelf.</div>
         </div>
       ),
     },
