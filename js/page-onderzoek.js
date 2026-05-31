@@ -712,6 +712,9 @@ const PageOnderzoek = () => {
                 De onderbouwing van het ontwerp: van probleemstelling en materiaalanalyse
                 tot trendverkenning, marktpositie en risicokaart. Klik op een kaart om de volledige inhoud te lezen.
               </p>
+              <p style={{ fontSize: 11, color: 'var(--ink-mute)', marginTop: 8, fontFamily: 'var(--mono)', letterSpacing: '0.06em' }}>
+                De pictogrammen linken door naar de bijbehorende bijlage.
+              </p>
             </div>
 
             {/* Accordion cards */}

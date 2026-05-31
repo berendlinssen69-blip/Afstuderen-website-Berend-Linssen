@@ -163,13 +163,13 @@ const Step04_MethodeCirculariteit = () => {
           <div className="step-num"><span className="bullet"/>STAP 04 · METHODE</div>
           <h2 className="wf-title">Methodische aanpak</h2>
           <p className="wf-body lg">
-            De Double Diamond werd gekozen als hoofdstructuur voor het project, omdat deze een duidelijke opbouw biedt van breed verkennen naar een concrete oplossing (<a href="onderzoek.html?open=pve" style={{color:"var(--green)", textDecoration:"underline"}}>zie bijlage PvE</a>). Voor de dagelijkse ontwerpbeslissingen bleek deze methode echter te globaal. Daarom is de basiscyclus van Roozenburg &amp; Eekels (1995) gebruikt als aanvullende werkwijze. Deze cyclus van analyseren, bedenken, uitwerken en evalueren maakte het mogelijk om ontwerpkeuzes stapsgewijs en iteratief te ontwikkelen. De volledige methodische verantwoording staat in het <a href="onderzoek.html?open=pva" style={{color:"var(--green)", textDecoration:"underline"}}>Plan van Aanpak</a>.
+            De Double Diamond werd gekozen als hoofdstructuur voor het project, omdat deze een duidelijke opbouw biedt van breed verkennen naar een concrete oplossing. Voor de dagelijkse ontwerpbeslissingen bleek deze methode echter te globaal. Daarom is de basiscyclus van Roozenburg &amp; Eekels (1995) gebruikt als aanvullende werkwijze. Deze cyclus van analyseren, bedenken, uitwerken en evalueren maakte het mogelijk om ontwerpkeuzes stapsgewijs en iteratief te ontwikkelen. De volledige methodische verantwoording staat in het <a href="onderzoek.html?open=pva" style={{color:"var(--green)", textDecoration:"underline"}}>Plan van Aanpak</a>.
           </p>
           <p className="wf-body">
             Die combinatie sloot goed aan bij de aard van de opdracht. De beschikbare restmaterialen verschilden per partij en de ontwerpopgave raakte meerdere thema's tegelijk: materiaal, productie, markt en duurzaamheid. Door beide methoden te combineren kon zowel op projectniveau als op detailniveau gestructureerd worden gewerkt.
           </p>
           <p className="wf-body">
-            Tijdens het proces bleek dat een derde aanpak nodig was. Sommige eigenschappen van het materiaal konden niet goed worden begrepen vanuit onderzoek alleen. Daarom is gewerkt volgens het principe van <em>Design by Doing</em>, gebaseerd op het idee van 'reflection in action' van Donald Schön. Door direct met het restmateriaal te werken, te naaien en te experimenteren, ontstond inzicht in de mogelijkheden en beperkingen van het materiaal. Deze praktische leerfase leverde kennis op die met deskresearch alleen niet bereikbaar was.
+            Tijdens het proces bleek dat een derde aanpak nodig was. Sommige eigenschappen van het materiaal konden niet goed worden begrepen vanuit onderzoek alleen. Daarom is gewerkt volgens het principe van Design by Doing. Deze aanpak sluit aan bij het concept reflection in action van Donald Schön (1983), waarin ontwerpers kennis opbouwen door te handelen en tegelijkertijd te reflecteren op hun handelen. Door direct met het restmateriaal te werken, te naaien en te experimenteren, ontstond inzicht in de mogelijkheden en beperkingen van het materiaal. Deze praktische leerfase leverde kennis op die met deskresearch alleen niet bereikbaar was.
           </p>
           <p className="wf-body">
             Daarnaast hielp deze aanpak om het risico op tijdsoverschrijding tijdens het prototypen te verkleinen. Door eerst ervaring op te doen met het materiaalgedrag, konden prototypes later sneller en gerichter worden ontwikkeld.
@@ -309,13 +309,13 @@ const RESEARCHES = [
     n: "05", ttl: "Stakeholderanalyse",
     href: "onderzoek.html?open=risico",
     meta: "Stakeholders · primair + secundair",
-    body: ["Om te begrijpen binnen welke context het ontwerp moest landen, zijn alle betrokken partijen in kaart gebracht op rol en invloed.", "Primair: Sit & Heat als opdrachtgever en materiaalexpert, het sociale atelier als toekomstige productiepartner, en de eindgebruiker. De ontwerprol was uitvoerend én verbindend: het samenbrengen van belangen die niet vanzelf op één lijn lagen.", "Sit & Heat bepaalde de randvoorwaarden rond duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de complexiteit: eenvoudige constructies, herhaalbare handelingen. De eindgebruiker vroeg om een product dat functioneel en relevant is. Die eisen hebben vaker draagvlak, dat spanningsveld is een rode draad door het hele ontwerpproces."],
+    body: ["Om te begrijpen binnen welke context het ontwerp moest landen, zijn alle betrokken partijen in kaart gebracht op rol en invloed.", "Primair: Sit & Heat als opdrachtgever en materiaalexpert, het sociale atelier als toekomstige productiepartner, en de eindgebruiker. De ontwerprol was uitvoerend én verbindend: het samenbrengen van belangen die niet vanzelf op één lijn lagen.", "Sit & Heat bepaalde de randvoorwaarden rond duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de complexiteit: eenvoudige constructies, herhaalbare handelingen. De eindgebruiker vroeg om een product dat functioneel en relevant is."],
     opl: [
       ["Primaire stakeholders", "Sit & Heat als opdrachtgever, materiaalexpert en projectbegeleider in een. Het sociale atelier als toekomstige productiepartner. De eindgebruiker van het te ontwikkelen product."],
       ["Interface stakeholder", "De afstudeerstudent: uitvoerend en verbindend tussen alle partijen."],
       ["Secundaire stakeholders", "Marketing en brandingafdeling van Sit & Heat, materiaaleveranciers, de HAN als onderwijsinstelling die de academische kaders stelt."]
     ],
-    concl: "De analyse liet zien dat de eisen uit meerdere lagen kwamen. Sit & Heat stelde voorwaarden op het gebied van duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de maakbaarheid: het werk moest bestaan uit eenvoudige, herhaalbare handelingen, zonder ingewikkelde machines (deze eisen moeten nog verder worden afgestemd). De eindgebruiker vroeg vooral om functionaliteit en relevantie. Opvallend is dat deze eisen niet altijd goed samen gaan. Zo moet een product kwaliteit uitstralen, terwijl het tegelijk simpel genoeg moet zijn om in een atelier te maken. Die spanning heeft het hele ontwerpproces beïnvloed. Het atelier bleek daarbij de meest beperkende factor voor de ontwerpvrijheid.",
+    concl: "De analyse liet zien dat de eisen uit meerdere lagen kwamen. Sit & Heat stelde voorwaarden op het gebied van duurzaamheid en merkidentiteit. Het sociale atelier stelde eisen aan de maakbaarheid: het werk moest bestaan uit eenvoudige, herhaalbare handelingen, zonder ingewikkelde machines (deze eisen moeten nog verder worden afgestemd). De eindgebruiker vroeg vooral om functionaliteit en relevantie. Opvallend is dat deze eisen niet altijd goed samen gaan. Zo moet een product kwaliteit uitstralen, terwijl het tegelijk simpel genoeg moet zijn om in een atelier te maken. Die spanning heeft het hele ontwerpproces beïnvloed.",
     pve: [
       { eis:"Past bij merkidentiteit Sit & Heat", toel:"Randvoorwaarde gesteld door Sit & Heat" },
       { eis:"Eenvoudige, herhaalbare stappen", toel:"Eis sociaal atelier: geen gespecialiseerde machines" },
@@ -508,14 +508,14 @@ const Step06_VoorlopigPvE = () => {
           <div className="step-num"><span className="bullet"/>STAP 06 · VOORLOPIG PvE</div>
           <h2 className="wf-title">Voorlopig programma<br/>van eisen</h2>
           <p className="wf-body lg">
-            Na het afronden van alle analyses is een <strong>voorlopig</strong> PvE opgesteld (bewust zonder vaste productcategorie). De reden: op dit punt in het proces was nog niet besloten wAt er gemaakt zou worden, alleen waaraan het moest voldoen. Het voorlopige PvE functioneerde daarmee als toetsingsinstrument voor de brainstorm en keuzefase. Later in het project volgt een definitief PvE op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
+            Na het afronden van alle analyses is een <strong>voorlopig</strong> PvE opgesteld (bewust zonder vaste productcategorie). De reden: op dit punt in het proces was nog niet besloten wat er gemaakt zou worden, alleen waaraan het moest voldoen. Het voorlopige PvE functioneerde daarmee als toetsingsinstrument voor de brainstorm en keuzefase. Later in het project volgt een definitief PvE op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
           </p>
           <ul style={{listStyle:"none", display:"flex", flexDirection:"column", gap:6, marginTop:8}}>
             {[
               ["Duurzaamheid en circulariteit","minimaal 70% restmateriaal van Sit & Heat, aantoonbaar hergebruik, communiceerbaar verhaal."],
               ["Maakbaarheid","produceerbaar in sociaal atelier, eenvoudige en herhaalbare stappen."],
-              ["Functionaliteit","veilig en functioneel inzetbaar."],
-              ["Esthetiek","passend bij merkidentiteit Sit & Heat, kwalitatief in afwerking."],
+              ["Functionaliteit","veilig"],
+              ["Esthetiek"," kwalitatief in afwerking."],
               ["Economie","inzichtelijke kostprijs en marktwaardige inzetbaarheid."],
               ["Opleidingskaders","minimaal een fysiek prototype en gedocumenteerd ontwerpproces."],
             ].map(([title, desc], i) => (
@@ -775,7 +775,7 @@ const Step11_NaaienExploratie = () => {
           <h2 className="wf-title">Pas door te doen,<br/>werd het materiaal begrepen.</h2>
           <p className="wf-body lg">
             Nul ervaring achter een naaimachine. Toch werd begonnen met het zelf maken
-            van kleine items in het restmateriaal. Geen prototypes. Gewoon leren.
+            van kleine items met het restmateriaal. Geen prototypes. Gewoon leren.
           </p>
           <p className="wf-body">
             Aflocken, naden wegwerken, plooien, patchwork. Elk proefstuk liet iets zien
@@ -1185,7 +1185,7 @@ const Step18_Verantwoording = () => {
               </p>
             </div>
             <p className="wf-body" style={{marginBottom:16}}>
-              Het antwoord is: door van SDA-restmateriaal een draagbare tascollectie te maken, geproduceerd door Sociaal Atelier Blueview Apeldoorn, verkoopbaar bij retailpartners in het segment €60–100. De collectie is circulair (directe hergebruikhiërarchie), marktwaardig (bevestigd door retailer Henri) en atelierproduceerbaar (bevestigd door Blueview na prototype v3).
+              Het antwoord is: door van SDA restmateriaal een draagbare tascollectie te maken, geproduceerd door Sociaal Atelier Blueview Apeldoorn, verkoopbaar bij retailpartners in het segment €60–100. De collectie is circulair (directe hergebruikhiërarchie), marktwaardig (bevestigd door retailer Henri) en atelierproduceerbaar (bevestigd door Blueview na prototype v3).
             </p>
           </div>
 
