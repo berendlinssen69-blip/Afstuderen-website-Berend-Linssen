@@ -1,6 +1,6 @@
 /* ACT 2 — 19 stappen · volledige inhoud uit het procesverslag
    Volgorde:
-   01  Het beginpunt — de open vraag
+   01  Het beginpunt, de open vraag
    02  Van vraag naar opdracht
    03  Plan van Aanpak — hoofdvraag + 8 deelvragen
    04  Methodische aanpak
@@ -8,16 +8,16 @@
    06  Voorlopig PvE
    07  Brainstorm (in chapters-brainstorm.js)
    08  Van ideeën naar richtingen
-   09  Ideeën structureren — 3 clusters
+   09  Ideeën structureren, 3 clusters
    10  Schetsen & visuele verkenning
-   11  Leren naaien — Design by Doing
+   11  Leren naaien, Design by Doing
    12  De keuze voor tassen
    13  Het retailgesprek — Henri
    14  Het spanningsveld
    15  Doelgroep definiëren
    16  Vormverkenning & schetsproces
    17  Het ontwerp (placeholder)
-   18  Verantwoording — waarom past dit bij Sit & Heat
+   18  Verantwoording, waarom past dit bij Sit & Heat
    19  Harde cijfers
 */
 
@@ -73,7 +73,7 @@ const Step02_VraagNaarOpdracht = () => {
           <div className="step-num"><span className="bullet"/>STAP 02 · VAN VRAAG NAAR OPDRACHT</div>
           <h2 className="wf-title">Van open vraag<br/>naar opdracht</h2>
           <p className="wf-body lg">
-            Een vraag als "doe iets met onze reststoffen" is geen opdracht. Om tot een werkbare opdracht te komen was het essentieel om eerst het speelveld te begrijpen: welke materialen er beschikbaar waren, wie er bij het project betrokken zouden zijn, en binnen welke randvoorwaarden het eindproduct moest vallen.
+            Een vraag als "doe iets met onze reststoffen" is geen opdracht. Om tot een werkbare opdracht te komen was het belangrijk om eerst het speelveld te begrijpen: welke materialen er beschikbaar waren, wie er bij het project betrokken zouden zijn, en binnen welke randvoorwaarden het eindproduct moest vallen.
           </p>
           <p className="wf-body">
             Dat vroeg om een brede, parallelle verkenning. Gesprekken met Jorg over de productie en het materiaal, een stakeholderanalyse voor de betrokken partijen Sit &amp; Heat, het sociale atelier, de opleiding en onderzoek naar de randvoorwaarden vanuit maakbaarheid en duurzaamheid.
@@ -100,15 +100,17 @@ const Step03_PvA = () => {
           <h2 className="wf-title">Wat het Plan van<br/>Aanpak opleverde</h2>
           <p className="wf-body" style={{marginBottom:16}}>De verkenning leidde tot een centrale onderzoeksvraag die de drie kernlagen van de opdracht samenvat: materiaal, productiecontext en marktrelevantie</p>
           <div style={{border:"1px solid var(--line)", padding:28, background:"var(--paper)"}}>
+            <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--thread)", marginBottom:6}}>Probleemstelling</div>
+            <p style={{fontSize:13, lineHeight:1.6, margin:"0 0 16px", color:"var(--ink)"}}>
+              Het ontwerpprobleem is niet simpelweg "maak iets van reststof". De uitdaging zit in de spanning tussen drie domeinen die elk hun eigen eisen stellen: het materiaal is hoogwaardig maar variabel van maat en kleur, het sociaal atelier beperkt de complexiteit van productietechnieken, en het eindproduct moet commercieel passen. Deze drie domeinen staan niet los van elkaar. Een materiaalkeuze die de maakbaarheid vergroot kan de marktwaarde verlagen, en omgekeerd. Het ontwerp moet dus op alle drie de lagen tegelijk functioneren.
+            </p>
             <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--ink-soft)", marginBottom:14}}>Centrale onderzoeksvraag</div>
             <h2 className="wf-title" style={{fontSize:"clamp(22px, 2.8vw, 38px)"}}>
               "Hoe kan Sit &amp; Heat haar <span style={{color:"var(--thread)"}}>reststromen</span> omzetten in een of meerdere <span style={{color:"var(--green)"}}>circulaire, marktwaardige productconcepten</span> die produceerbaar zijn door mensen met een afstand tot de arbeidsmarkt?"
             </h2>
           </div>
           <p className="wf-body" style={{marginTop:4}}>
-            Deze vraag combineert drie lagen die elk hun eigen eisen stellen aan het ontwerp:
-            het materiaal moet de basis zijn, het product moet maakbaar zijn binnen de context
-            van het sociale atelier, en het resultaat moet realistisch toepasbaar zijn.
+            Uit deze hoofdvraag zijn acht deelvragen afgeleid die elk een specifiek aspect van het ontwerpprobleem adresseren:
           </p>
           <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginTop:8}}>
             {[
@@ -135,7 +137,7 @@ const Step03_PvA = () => {
               communicatie. 
               De risico's die hier als hoog werden beoordeeld, variatie in materiaaleigenschappen, beperkte
               ateliercapaciteit en tijdoverschrijding bij prototyping kwamen later daadwerkelijk terug als
-              sturende factoren in de ontwerpkeuzes. (voor het volledige overzicht van risico's, zie het risicodocument onder het kopje onderzoek).
+              sturende factoren in de ontwerpkeuzes. (voor het volledige overzicht van risico's, zie het <a href="onderzoek.html?open=risico" style={{color:"var(--green)", textDecoration:"underline"}}>risicodocument</a> onder het kopje onderzoek).
             </p>
           </div>
         </div>
@@ -503,7 +505,7 @@ const Step06_VoorlopigPvE = () => {
           <div className="step-num"><span className="bullet"/>STAP 06 · VOORLOPIG PvE</div>
           <h2 className="wf-title">Voorlopig programma<br/>van eisen</h2>
           <p className="wf-body lg">
-            Na het afronden van alle analyses is een <strong>voorlopig</strong> PvE opgesteld (bewust zonder vaste productcategorie). De reden: op dit punt in het proces was nog niet besloten wát er gemaakt zou worden, alleen wááraan het moest voldoen. Het voorlopige PvE functioneerde daarmee als toetsingsinstrument voor de brainstorm- en keuzefase. Later in het project volgt een definitief PvE op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
+            Na het afronden van alle analyses is een <strong>voorlopig</strong> PvE opgesteld (bewust zonder vaste productcategorie). De reden: op dit punt in het proces was nog niet besloten wAt er gemaakt zou worden, alleen waaraan het moest voldoen. Het voorlopige PvE functioneerde daarmee als toetsingsinstrument voor de brainstorm en keuzefase. Later in het project volgt een definitief PvE op basis van de gekozen richting. De eisen waren onderverdeeld in zes thema's:
           </p>
           <ul style={{listStyle:"none", display:"flex", flexDirection:"column", gap:6, marginTop:8}}>
             {[
@@ -521,6 +523,9 @@ const Step06_VoorlopigPvE = () => {
           </ul>
           <p className="wf-body" style={{marginTop:12}}>
             Het PvE functioneerde vanaf dit punt als toetsingsinstrument.
+            Elke eis heeft een unieke code (bijv. <span style={{fontFamily:"var(--mono)", color:"var(--green)", fontSize:12}}>D.1</span>, <span style={{fontFamily:"var(--mono)", color:"var(--green)", fontSize:12}}>F.6</span>, <span style={{fontFamily:"var(--mono)", color:"var(--green)", fontSize:12}}>A.3</span>).
+            Verderop in het verslag verwijzen groene codes in de rechterkolom steeds naar deze eisen, zodat elke ontwerpkeuze traceerbaar is naar een eis uit het PvE.
+            Voor het volledig uitgewerkte definitieve PvE, zie stap 25.
           </p>
         </div>
         <div className="step-stage reveal-right" style={{flexDirection:"column", overflowY:"auto", maxHeight:"80vh", paddingRight:4, alignItems:"stretch", justifyContent:"flex-start"}}>
@@ -856,7 +861,7 @@ const KeuzematrixTable = () => (
 const Step12_KeuzeTassen = () => {
   const ref = useReveal();
   return (
-    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"360vh", padding:"80px 0 200px"}}>
+    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"220vh", padding:"80px 0 80px"}}>
       <FrameLabel num="12" name="De keuze: tassencollectie" />
       <div className="step-bg" />
       <div className="step-pin" style={{position:"relative", top:"auto", height:"auto", gridTemplateColumns:"1fr"}}>
@@ -1129,7 +1134,7 @@ const Step18_Verantwoording = () => {
           <p className="wf-body lg">
             De tas is geen verwarmd product en valt daarmee buiten het bestaande productportfolio en doelgroep
             van Sit &amp; Heat. De vraag of een
-            product past bij een merk gaat verder dan productcategorie de vraag of een porduct past bij een merk gaat om merkwaarden,
+            product past bij een merk gaat verder dan productcategorie de vraag of een product past bij een merk gaat om merkwaarden,
             gebruiker en herkomst.
           </p>
           <p className="wf-body">
@@ -1259,6 +1264,29 @@ const Step18_Verantwoording = () => {
           </div>
           {/* Toetsingstabel — stand van zaken */}
           {(() => { const T = window.PvEToetsingstabel; return T ? <T /> : null; })()}
+
+          {/* Link naar bronvermelding */}
+          <div style={{marginTop:16, paddingTop:16, borderTop:"1px solid var(--line-soft)"}}>
+            <a href="onderzoek.html?open=bronvermelding" style={{fontFamily:"var(--mono)", fontSize:11, color:"var(--green)", textDecoration:"underline", letterSpacing:"0.06em"}}>
+              → Volledige bronvermelding op de Onderzoekspagina
+            </a>
+          </div>
+
+          {/* Vervolg */}
+          <div style={{marginTop:40, paddingTop:32, borderTop:"1px solid var(--line)"}}>
+            <div className="step-num" style={{marginBottom:12}}><span className="bullet"/>VERVOLG</div>
+            <h3 style={{fontFamily:"var(--sans)", fontWeight:500, fontSize:"clamp(18px,2vw,26px)", marginBottom:16}}>
+              Wat dit betekent voor Sit &amp; Heat
+            </h3>
+            <p className="wf-body" style={{marginBottom:0}}>
+              Dit project levert Sit &amp; Heat een productieklaar concept op, een onderbouwde businesscase en een directe
+              samenwerking met Blueview Sociaal Atelier. De volgende stap is een pilotproductierun in juni 2026, waarbij het patroon
+              en de productiehandleiding worden gevalideerd in het atelier.
+              Op langere termijn biedt het Freitag-model van kleurvariatie als feature een kans om de collectie per seizoen
+              te differentiëren zonder extra inkoopkosten. Dit project is daarmee niet het eindpunt van een afstudeertraject,
+              maar de start van een reële productlijn.
+            </p>
+          </div>
 
           <div style={{clear:"both"}} />
         </div>
@@ -1657,12 +1685,61 @@ const Outro = () => (
       <p className="wf-body" style={{marginTop:8}}>Berend Linssen · bi.linssen@student.han.nl</p>
       <p className="wf-body" style={{marginTop:4}}>Sit &amp; Heat · Sociaal atelier BlueView Apeldoorn</p>
       <p className="wf-body" style={{marginTop:16, color:"rgba(255,255,255,0.4)"}}>
-        Met dank aan Jorg, Jeroen, Femke, Thijs, Niels, Milan, Hugo, Henri, Roel
+        Met dank aan Jorg (CEO Sit &amp; Heat), Jeroen (co-founder/sales Sit &amp; Heat), Niels (head of sales), Milan, Femke, Thijs, Hugo, Henri (Tempel Mode), Roel
         en iedereen bij het sociale atelier die dit mogelijk maakte.
       </p>
     </div>
   </section>
 );
+
+/* ────────────────────────────────────────────────────────────────────────
+   TERUGKOPPELING BLOKKEN
+   Geen data-step-num verschijnen niet in het progress wheel.
+   Staan als bruggen tussen de grote fasen.
+   ────────────────────────────────────────────────────────────────────── */
+
+const _TK = {
+  outer: { padding:"36px 0", background:"var(--paper)", borderTop:"1px solid var(--line-soft)" },
+  inner: { maxWidth:700, margin:"0 auto", padding:"0 6vw" },
+};
+
+const TerugkoppelingBrainstorm = () => {
+  const ref = useReveal();
+  return (
+    <section ref={ref} style={_TK.outer}>
+      <div style={_TK.inner}>
+        <div className="reveal-stagger" style={{borderLeft:"3px solid var(--green)", paddingLeft:20}}>
+          <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--green)", marginBottom:10}}>Terugkoppeling · Brainstormfase</div>
+          <p style={{fontSize:13, lineHeight:1.65, margin:"0 0 10px"}}>
+            Het materiaalonderzoek (stap 5) wees SDA aan als meest waardevolle reststroom voor directe hergebruik. De Freitag referentie uit het marktonderzoek (variabel afvalmateriaal als uniek verkoopargument) werd hiermee niet alleen als strategie bevestigd, maar ook als productcategorie.
+          </p>
+          <p style={{fontSize:12, lineHeight:1.65, margin:"0 0 8px", color:"var(--ink-soft)"}}>
+            Het voorlopig PvE (stap 6) was bewust opgesteld zonder vaste productcategorie, als filter voor de brainstorm. De uitkomsten zitopties, horeca items en tassen voldoen aan de gestelde eisen: min. 70% restmateriaal haalbaar, maakbaar in een sociaal atelier, en marktwaardig. De risicoanalyse (stap 3) had materiaelvariatie als hoog risico aangemerkt. Tassen kunnen variabele kleuren en maten opvangen, waardoor dit risico direct werd geadresseerd door de productkeuze zelf.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const TerugkoppelingPrototyping = () => {
+  const ref = useReveal();
+  return (
+    <section ref={ref} style={_TK.outer}>
+      <div style={_TK.inner}>
+        <div className="reveal-stagger" style={{borderLeft:"3px solid var(--green)", paddingLeft:20}}>
+          <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--green)", marginBottom:10}}>Terugkoppeling · Prototypingfase</div>
+          <p style={{fontSize:13, lineHeight:1.65, margin:"0 0 10px"}}>
+            De methodische keuze voor Design by Doing (stap 4) werd door de prototypefase gerechtvaardigd: materiaaleigenschappen zoals fraying, stijfheid en benodigde naadmarge waren niet op papier te voorspellen, maar kwamen pas naar voren door fysiek te maken. De risicoanalyse (stap 3) had materiaelvariatie en beperkte ateliercapaciteit als hoge risico's aangemerkt, beide kwamen daadwerkelijk terug als sturende factoren. Materiaelvariatie vroeg om organischere patronen (v4). Atelierbeperkingen (max. 10 lagen stof, 1 cm naadmarge, afgewerkte snijkanten) kwamen pas bij het Blueview gesprek (stap 24) aan het licht en ontbraken in het voorlopig PvE.
+          </p>
+          <p style={{fontSize:12, lineHeight:1.65, margin:"0 0 8px", color:"var(--ink-soft)"}}>
+            Het marktonderzoek (stap 5) suggereerde een consumentenprijs van 60–100 euro. Henri bevestigde dit segment bij de validatie van prototype 3 (stap 22), waarmee de aanname uit het onderzoek werd omgezet in een gevalideerde eis (E.2). Het voorlopig PvE (stap 6) groeide door de prototypefase van een kader zonder productie-eisen naar een levend document: vier nieuwe maakbaarheidseisen (M.3–M.6) zijn direct afkomstig uit de praktijk, niet uit deskresearch.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 Object.assign(window, {
   Step01_OpenVraag, Step02_VraagNaarOpdracht, Step03_PvA, Step04_MethodeCirculariteit,
@@ -1673,5 +1750,6 @@ Object.assign(window, {
   Step12_KeuzeTassen, Step13_RetailHenri, Step14_Spanningsveld,
   Step15_Doelgroep,
   Step18_Verantwoording, Step19_HardeCijfers,
-  Outro
+  Outro,
+  TerugkoppelingBrainstorm, TerugkoppelingPrototyping,
 });

@@ -32,7 +32,7 @@ const Crazy8sIntro = () => {
           <div className="step-num"><span className="bullet"/>STAP 08 · BRAINSTORM · FASE 1</div>
           <h2 className="wf-title">Crazy 8s</h2>
           <p className="wf-body lg">
-            Twee groepen deden elk 8 snelle schetsen in 8 minuten. Groep een: Jeroen, Femke en Thijs. Groep twee: Jorg, Niels, Milan en Hugo.
+            Twee groepen deden elk 8 snelle schetsen in 8 minuten. Groep een: Jeroen (co-founder/sales), Femke (stagiaire facilitair) en Thijs (afstudeerstagiair branding, oud-IPO'er). Groep twee: Jorg (CEO), Niels (head of sales), Milan (afstudeerstagiair sales) en Hugo (oud-stagiair, IPO 3e jaars).
           </p>
           <p className="wf-body">
             <strong>Waarom Crazy 8s?</strong> De tijdsdruk dwingt divergent denken af. Je hebt geen tijd om aan jezelf te twijfelen of te wachten op het perfecte idee. Je schetst wat er in je opkomt. Dat maakt het laagdrempelig als opwarming: schetskwaliteit doet er niet toe, het gaat om kwantiteit en variatie.
@@ -212,8 +212,47 @@ const BrainstormIntroSection = () => {
             Op dit punt in het project was het probleem duidelijk gedefinieerd, maar was er nog geen concrete oplossing of richting. Daarom was het belangrijk om in korte tijd zo veel mogelijk verschillende ideeën te verzamelen. Brainstormen was hiervoor de meest effectieve aanpak.
           </p>
           <p className="wf-body">
-            Er is gekozen voor een combinatie van drie technieken. Crazy 8’s werd gebruikt als snelle opwarming om zonder veel nadenken of zelfcensuur ideeën op papier te krijgen. Daarna volgde 4-4-6 Brainwriting, waarmee systematisch werd voortgebouwd op elkaars ideeën. Tot slot werd het Disney-model ingezet om de meest kansrijke concepten te bekijken vanuit drie perspectieven: de dromer, de realist en de criticus.
+            De sessie begon niet met "ga maar schetsen". Voorafgaand aan het brainstormen werd een uitgebreide briefing gegeven via een presentatie (<a href="onderzoek.html?open=brainstorm" style={{color:"var(--green)", textDecoration:"underline"}}>zie bijlage</a>). Daarin werden het probleem, de beschikbare materialen, de concurrentie analyse, relevante trends, inspiratie uit de markt (o.a. Freitag als referentie) en de ontwerpcriteria (moet/mag niet/wens) behandeld. Pas na die gezamenlijke context werd de centrale vraag gesteld:
           </p>
+          <div style={{border:"1px solid var(--line)", padding:20, background:"var(--paper)", margin:"8px 0 0"}}>
+            <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--thread)", marginBottom:8}}>Centrale vraag brainstorm</div>
+            <p style={{fontSize:"clamp(15px, 1.8vw, 20px)", fontWeight:600, lineHeight:1.4, margin:0}}>
+              "Welk product kunnen wij maken van het restmateriaal van Sit &amp; Heat dat duurzaam, maakbaar en betekenisvol is?"
+            </p>
+          </div>
+        </div>
+
+        <div className="step-stage" style={{flexDirection:"column", justifyContent:"center", alignItems:"stretch", gap:12}}>
+          {/* Groep 1 */}
+          <div style={{border:"1px solid var(--line)", padding:"14px 16px", background:"var(--paper)"}}>
+            <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--thread)", marginBottom:10}}>Groep 1 · dag 1</div>
+            {[
+              ["Jeroen","Co-founder & sales, marktkennis en netwerk"],
+              ["Femke","Stagiaire facilitair MBO, diversiteit in perspectief"],
+              ["Thijs","Afstudeerstagiair Branding (oud IPO’er), ontwerpervaring"],
+            ].map(([name, desc], i) => (
+              <div key={i} style={{display:"grid", gridTemplateColumns:"64px 1fr", gap:8, padding:"5px 0", borderBottom:"1px solid var(--line-soft)", alignItems:"baseline"}}>
+                <span style={{fontFamily:"var(--mono)", fontSize:11, fontWeight:600, color:"var(--ink)"}}>{name}</span>
+                <span style={{fontSize:11, lineHeight:1.5, color:"var(--ink-soft)"}}>{desc}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Groep 2 */}
+          <div style={{border:"1px solid var(--line)", padding:"14px 16px", background:"var(--paper)"}}>
+            <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--thread)", marginBottom:10}}>Groep 2 · dag 2</div>
+            {[
+              ["Jorg","CEO & oud IPO’er, strategie en marktrichting"],
+              ["Niels","Head of Sales, klantperspectief en commercie"],
+              ["Milan","Afstudeerstagiair Sales, frisse commerciële blik"],
+              ["Hugo","Oud-stagiair, 3e-jaars IPO HAN, ontwerpdenken"],
+            ].map(([name, desc], i) => (
+              <div key={i} style={{display:"grid", gridTemplateColumns:"64px 1fr", gap:8, padding:"5px 0", borderBottom:"1px solid var(--line-soft)", alignItems:"baseline"}}>
+                <span style={{fontFamily:"var(--mono)", fontSize:11, fontWeight:600, color:"var(--ink)"}}>{name}</span>
+                <span style={{fontSize:11, lineHeight:1.5, color:"var(--ink-soft)"}}>{desc}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
