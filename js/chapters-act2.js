@@ -864,7 +864,7 @@ const KeuzematrixTable = () => (
 const Step12_KeuzeTassen = () => {
   const ref = useReveal();
   return (
-    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"220vh", padding:"80px 0 80px"}}>
+    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"220vh", padding:"80px 0 80px", zIndex:5, position:"relative"}}>
       <FrameLabel num="12" name="De keuze: tassencollectie" />
       <div className="step-bg" />
       <div className="step-pin" style={{position:"relative", top:"auto", height:"auto", gridTemplateColumns:"1fr"}}>
@@ -1085,8 +1085,7 @@ const Step15_Doelgroep = () => {
           <p className="wf-body">
             De houding en waarden van deze gebruiker sluiten direct aan op het materiaalverhaal.
             Kiest voor producten met een eerlijke herkomst en een verhaal, heeft oog voor materiaal
-            en afwerking, past bij een wereldbeeld waarin keuzes betekenis hebben zonder dat dit
-            schreeuwt. De tas is unisex.
+            en afwerking. De tas is unisex.
           </p>
           <div className="stat-row">
             <div className="stat"><div className="v">20-50</div><div className="l">leeftijd</div></div>
@@ -1137,7 +1136,7 @@ const Step18_Verantwoording = () => {
           <p className="wf-body lg">
             De tas is geen verwarmd product en valt daarmee buiten het bestaande productportfolio en doelgroep
             van Sit &amp; Heat. De vraag of een
-            product past bij een merk gaat verder dan productcategorie de vraag of een product past bij een merk gaat om merkwaarden,
+            product past bij een merk gaat verder dan productcategorie. De vraag of een product past bij een merk gaat om merkwaarden,
             gebruiker en herkomst.
           </p>
           <p className="wf-body">
@@ -1153,18 +1152,19 @@ const Step18_Verantwoording = () => {
               Het duurzame verhaal zit in het product, niet als marketinglaag erover.</p>
             </li>
             <li style={{padding:"12px 0", borderBottom:"1px solid var(--line-soft)"}}>
-              <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>KWALITEIT</div>
-              <p style={{fontSize:14, lineHeight:1.55}}>Solution dyed acrylic is een hoogwaardig materiaal, UV bestendig, waterafstotend en
-              slijtvast. Dat in de tassensector ook als premiummateriaal wordt ingezet.
-              Dat dit restmateriaal is, doet niets af aan die kwaliteit. Het versterkt juist
-              het verhaal.</p>
+              <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>SPECIALISME</div>
+              <p style={{fontSize:14, lineHeight:1.55}}>Sit &amp; Heat is specialist in buitenstof. Die expertise zit nu ook in de tas.
+              Het SDA-materiaal is UV-bestendig, waterafstotend en slijtvast — dezelfde kwaliteit
+              die Sit &amp; Heat in hun kernproducten levert. De keuze om dit restmateriaal direct
+              te hergebruiken als buitenstof komt voort uit materiaalkennis, niet uit toeval.</p>
             </li>
             <li style={{padding:"12px 0"}}>
-              <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>BUITENLEVEN</div>
-              <p style={{fontSize:14, lineHeight:1.55}}>De gedragscontext van de doelgroep. De gebruiker van de tas is dezelfde persoon
-              die op een Sit &amp; Heat kussen zit. Een stadsbewoner die buiten leeft, terrassen
-              bezoekt, fietst. Sit &amp; Heat ontwerpt voor die persoon als hij/zij zit. De tas
-              ontwerpt voor diezelfde persoon terwijl hij/zij onderweg is.</p>
+              <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>GASTVRIJHEID</div>
+              <p style={{fontSize:14, lineHeight:1.55}}>Sit &amp; Heat ontwerpt voor het moment waarop iemand gaat zitten. De tas
+              ontwerpt voor het moment daarvoor en daarna: onderweg naar het terras, de kroeg,
+              de stad. De gebruiker van de tas is dezelfde persoon die op een Sit &amp; Heat kussen
+              zit. Door voor diezelfde persoon te ontwerpen, blijft het merk aanwezig in het hele
+              traject van de gebruiker, niet alleen op het terras.</p>
             </li>
           </ul>
           <div style={{border:"1px solid var(--line)", padding:14, background:"var(--paper)", marginTop:8}}>
@@ -1205,7 +1205,7 @@ const Step18_Verantwoording = () => {
                   "Beperking: de ateliereisen zijn gebaseerd op een oriënterend bezoek aan Blueview Apeldoorn. Validatie via een volledige productierun volgt in juni 2026."],
                 ["DV 4", "Welke concepten zijn produceerbaar met wisselend materiaal?",
                   "Drie tasvarianten met een basispatroon plus een patchwork optie voor kleine restlappen. Kleurvariatie is een toevoeging, geen probleem (Freitag-model).",
-                  "Beperking: het patchwork patroon is nog niet getest in het atelier. De productietijd per tas is daarvoor nog onbekend."],
+                  "Beperking: het patchwork patroon is nog niet getest in het atelier. De productietijd per tas is daardoor nog onbekend."],
                 ["DV 5", "Welke beperkingen gelden binnen de productie?",
                   "Beperkte atelieruren, wisselende materiaalvlakken, geen industriële machines. Opgelost via eenvoudig patroonsysteem en productiehandleiding (in ontwikkeling).",
                   "Beperking: de productiehandleiding is nog niet af. De werkelijke maakbaarheid is daarmee nog niet volledig gevalideerd."],
@@ -1214,7 +1214,7 @@ const Step18_Verantwoording = () => {
                   "Beperking: trendanalyse is desk research, geen primaire bronnen of consumentenonderzoek. De vertaling van trend naar koopbereidheid is niet empirisch getoetst."],
                 ["DV 7", "Naar welke producten is er vraag in de doelgroep?",
                   "Actieve stadsbewoners, 20–50 jaar, €60–€100 budget. Bevestigd via Henri interview 1 (marktverkenning).",
-                  "Beperking: doelgroep is gevalideerd via één retailer in Nijmegen. Bredere doelgroepvalidatie (gebruikerstest) volgt in juni 2026."],
+                  "Beperking: doelgroep is gevalideerd via een retailer in Nijmegen. Bredere doelgroepvalidatie (gebruikerstest) volgt in juni 2026."],
                 ["DV 8", "Hoe verhouden de concepten zich tot kostprijs, duurzaamheidsimpact en verkoopprijs?",
                   "~€28 inkoopprijs, €70 verkoopprijs. ~53 tassen/maand uit huidige reststroom. ~874 kg CO₂e vermeden per maand. Volledig uitgewerkt in stap 27 (harde cijfers).",
                   "Beperking: de kostprijsberekening is gedeeltelijk gebaseerd op schattingen. De CO₂-berekening volgt de Higg MSI methodiek met aannames voor transportafstand."],
@@ -1250,7 +1250,7 @@ const Step18_Verantwoording = () => {
                 ["Relatie met het sociale atelier",
                   "Blueview verwerkt dit materiaal al voor de kussens van Sit & Heat. Kennis van het materiaal is aanwezig in het atelier. Dat verlaagt de drempel voor productie aanzienlijk en maakt de materiaalkeuze logisch vanuit productieperspectief."],
                 ["Circulariteitsargument",
-                  "oor het SDA weefsel direct te hergebruiken voor tassen, blijft de materiaalwaarde volledig behouden. Binnen de R-strategiehiërarchie van Potting et al. (2017) valt dit daardoor in een van de hoogste vormen van circulariteit. Het alternatief (het recyclen van SDA) zorgt voor kwaliteitsverlies en vraagt om een infrastructuur die in Nederland nog beperkt aanwezig is. Daarom is direct hergebruik in dit geval de duurzamere keuze."],
+                  "Door het SDA weefsel direct te hergebruiken voor tassen, blijft de materiaalwaarde volledig behouden. Binnen de R-strategiehiërarchie van Potting et al. (2017) valt dit daardoor in een van de hoogste vormen van circulariteit. Het alternatief (het recyclen van SDA) zorgt voor kwaliteitsverlies en vraagt om een infrastructuur die in Nederland nog beperkt aanwezig is. Daarom is direct hergebruik in dit geval de duurzamere keuze."],
               ].map(([titel, tekst], i) => (
                 <div key={i} style={{display:"flex", gap:16, alignItems:"flex-start",
                   padding:"14px 0", borderBottom: i < 3 ? "1px solid var(--fill-2)" : "none"}}>
