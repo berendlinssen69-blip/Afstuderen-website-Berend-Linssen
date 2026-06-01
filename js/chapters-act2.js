@@ -864,7 +864,7 @@ const KeuzematrixTable = () => (
 const Step12_KeuzeTassen = () => {
   const ref = useReveal();
   return (
-    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"220vh", padding:"80px 0 80px", zIndex:5, position:"relative"}}>
+    <section className="step" ref={ref} data-screen-label="14 De keuze voor tassen" style={{minHeight:"380vh", padding:"90vh 0 80px", position:"relative"}}>
       <FrameLabel num="12" name="De keuze: tassencollectie" />
       <div className="step-bg" />
       <div className="step-pin" style={{position:"relative", top:"auto", height:"auto", gridTemplateColumns:"1fr"}}>
