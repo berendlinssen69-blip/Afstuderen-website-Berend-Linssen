@@ -16,7 +16,7 @@
    14  Het spanningsveld
    15  Doelgroep definiëren
    16  Vormverkenning & schetsproces
-   17  Het ontwerp (placeholder)
+   17  Schetsen & vormverkenning (in chapters-bag-design.js)
    18  Verantwoording, waarom past dit bij Sit & Heat
    19  Harde cijfers
 */
@@ -1596,10 +1596,10 @@ const Outro = () => (
     <div style={{marginTop:56, marginBottom:48, borderTop:"1px solid rgba(255,255,255,0.15)", paddingTop:40}}>
       <div className="step-num" style={{marginBottom:16, color:"rgba(255,255,255,0.4)"}}><span className="bullet"/>WAT HIERNA KOMT</div>
       <h3 className="wf-title" style={{fontSize:"clamp(20px, 2.5vw, 32px)", marginBottom:16}}>
-        Testplan: 2 juni → 30 juni
+        Testplan: 1 juni → 30 juni
       </h3>
       <p className="wf-body" style={{marginBottom:12, fontSize:16, lineHeight:1.7}}>
-        Het verslag wordt ingeleverd op <strong style={{color:"var(--bg)"}}>2 juni</strong>. De eindzitting is op <strong style={{color:"var(--bg)"}}>30 juni</strong>. In de tussenliggende vier weken wordt het ontwerp afgerond, getest en gedocumenteerd. Het eindproduct en de validatie worden gepresenteerd buiten het verslag om, als onderdeel van de zitting.
+        Het verslag wordt ingeleverd op <strong style={{color:"var(--bg)"}}>1 juni</strong>. De eindzitting is op <strong style={{color:"var(--bg)"}}>30 juni</strong>. In de tussenliggende vier weken wordt het ontwerp afgerond, getest en gedocumenteerd. Het eindproduct en de validatie worden gepresenteerd buiten het verslag om, als onderdeel van de zitting.
       </p>
 
       {/* Tijdlijn */}
@@ -1631,7 +1631,7 @@ const Outro = () => (
             week:"Week 1",
             pve:"F.1 · F.3 · F.4 · F.5 · M.3 · O.2",
             title:"Prototype v4 afronden en keuren",
-            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het PvE: laagentelling, laptopruimte meten, riemlengte controleren, 45° kanteltest uitvoeren. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een kleine v4.1 nodig? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
+            body:"De binnenhoes en definitieve hardware worden afgemaakt. Daarna volgt een volledige toetsing aan het PvE: lagentelling, laptopruimte meten, riemlengte controleren, 45° kanteltest uitvoeren. Op basis van die toetsing wordt besloten: gaat v4 rechtstreeks naar productie, of is er een kleine v4.1 nodig? Het criterium is niet perfectie, maar of de tas productierijp is voor Blueview."
           },
           {
             num:"02",
@@ -1645,7 +1645,7 @@ const Outro = () => (
             week:"Week 2",
             pve:"A.4",
             title:"Branding uitwerken",
-            body:"De tas heeft nog geen label. Branding die niet aansluit op het product ondermijnt het verhaal. Nu het product concreet is, wordt een eenvoudig naailabel ontworpen van restmateriaal of gerecycled papier, met merknaam en materiaalherkomst (A.4). Het label maakt de circulaire herkomst zichtbaar op straat."
+            body:"De tas heeft nog geen label. Branding die niet aansluit op het product ondermijnt het verhaal. Nu het product concreet is, wordt een eenvoudig naailabel ontworpen van restmateriaal of gerecycled plastic, met merknaam en materiaalherkomst (A.4). Het label maakt de circulaire herkomst zichtbaar op straat."
           },
           {
             num:"04",

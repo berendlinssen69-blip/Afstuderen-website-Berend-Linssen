@@ -212,6 +212,37 @@ const Act2Intro = () => {
   );
 };
 
+/* ---------- LEESWIJZER ---------- */
+const Leeswijzer = () => {
+  const ref = useReveal();
+  return (
+    <section className="step tall" ref={ref} style={{minHeight:"auto", padding:"60px 0 40px", background:"var(--paper)"}}>
+      <div className="step-pin" style={{height:"auto", position:"relative", top:"auto", gridTemplateColumns:"1fr", maxWidth:900, margin:"0 auto", padding:"0 40px"}}>
+        <div className="step-content reveal-stagger" style={{maxWidth:"100%"}}>
+          <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--thread)", marginBottom:12}}>Leeswijzer</div>
+          <h3 style={{fontSize:"clamp(18px, 2vw, 26px)", fontWeight:600, margin:"0 0 16px", lineHeight:1.3}}>Zo lees je dit verslag</h3>
+          <p style={{fontSize:13, lineHeight:1.7, margin:"0 0 20px", color:"var(--ink)"}}>
+            Dit verslag is een interactieve website. Scroll naar beneden om het volledige ontwerpproces te doorlopen, van open vraag tot eindproduct in 27 chronologische stappen. Alle keuzemomenten zijn zichtbaar en traceerbaar.
+          </p>
+          <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:12, marginTop:4}}>
+            {[
+              ["Navigeren","Gebruik het scrollwiel of de pijltoetsen. Het voortgangswieltje links toont de huidige stap. Elke stap heeft een nummer en naam in de linkerbovenhoek."],
+              ["Groene codes","Codes zoals F.6 of D.1 zijn eisen uit het Programma van Eisen (PvE). Ze verschijnen in de rechterkolom van feedbacktabellen en laten zien welke eis een ontwerpbeslissing aanstuurt. Het volledige PvE staat bij stap 25."],
+              ["Links","Groene onderstreepte tekst zijn klikbare links naar externe bronnen, bijlagen (PDF) of andere stappen op deze website."],
+              ["Bijlagen","Via het menu bovenin bereik je de Onderzoekspagina, Materialen en het Miro procesbord. Alle uitgebreide rapporten (Plan van Aanpak, materiaal, trend en marktonderzoek, brainstorm presentatie) zijn daar als PDF te downloaden."],
+            ].map(([title, desc], i) => (
+              <div key={i} style={{padding:"14px 16px", border:"1px solid var(--line-soft)", background:"var(--fill)"}}>
+                <div style={{fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.14em", textTransform:"uppercase", color:"var(--green)", marginBottom:6}}>{title}</div>
+                <p style={{fontSize:12, lineHeight:1.6, margin:0, color:"var(--ink)"}}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 Object.assign(window, {
-  Nav, ActOne, Act2Intro, easeIO, easeOutCubic, easeOutBack
+  Nav, ActOne, Act2Intro, Leeswijzer, easeIO, easeOutCubic, easeOutBack
 });

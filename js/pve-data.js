@@ -117,7 +117,7 @@ window.PVE_TOETSING = [
   { nr: "F.9",  status: "deels",   bewijs: "Click-systeem voor slingback ingekocht voor V4 (Stap 23). Functionele test volgt bij v4 afronden." },
   { nr: "F.10", status: "deels",   bewijs: "Binnenvak aanwezig in V3 (Stap 21). Binnenhoes V4 nog in productie; definitief bij eindinspectie." },
   { nr: "F.11", status: "voldaan", bewijs: "SDA is inherent UV en weerbestendig (Materiaalonderzoek, Stap 05). Geen extra behandeling nodig." },
-  { nr: "F.12", status: "gepland", bewijs: "Stabiliteitsstest bij volledig gevulde v4 (juni)." },
+  { nr: "F.12", status: "gepland", bewijs: "Stabiliteitstest bij volledig gevulde v4 (juni)." },
 
   /* ── Esthetiek & Merkidentiteit ── */
   { nr: "A.1", status: "voldaan",  bewijs: "Merkvalidatie door Jorg (Stap 22): ontwerp past bij S&H waarden. Verantwoording in Stap 26." },

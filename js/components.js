@@ -1,12 +1,5 @@
 /* Wireframe primitives + scroll utilities */
 
-/* Foto/video placeholder — toont "foto/video komt nog" */
-const WfImg = ({ label = "Image", aspect = "16/9", className = "", style = {} }) => (
-  <div className={`wf-img ${className}`} style={{ aspectRatio: aspect, ...style }}>
-    <span className="lab">{label}</span>
-    <span className="coming">foto / video komt nog</span>
-  </div>
-);
 
 const WfTag = ({ children, solid = false }) => (
   <span className={`wf-tag ${solid ? 'solid' : ''}`}>
@@ -184,7 +177,7 @@ const useRevealDir = (dir = 'left') => {
 };
 
 Object.assign(window, {
-  WfImg, WfTag, Anno, FrameLabel, Reveal, useReveal, useRevealDir,
+  WfTag, Anno, FrameLabel, Reveal, useReveal, useRevealDir,
   useScrollProgress, clamp, lerp, slice,
   ArtMaterials, ArtSketch, Art3D, BgRotate
 });

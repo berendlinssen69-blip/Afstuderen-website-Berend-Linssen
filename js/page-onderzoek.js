@@ -33,12 +33,7 @@
     .pdf-link-btn:hover { background: var(--ink); color: var(--paper); }
     .pdf-link-btn svg { transition: stroke .2s; }
     .pdf-link-btn:hover svg { stroke: var(--paper); }
-    .pdf-placeholder {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      height: 200px; border: 1px dashed var(--line); color: var(--ink-mute);
-      font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; gap: 8px;
-    }
-    .maatregel { font-size: 12px; color: var(--ink-soft); margin-top: 3px; }
+.maatregel { font-size: 12px; color: var(--ink-soft); margin-top: 3px; }
 
     /* Image gallery with long-press zoom */
     .gallery-section-label {
@@ -243,16 +238,6 @@ const PdfLink = ({ src, children }) => (
   </div>
 );
 
-/* ── Placeholder for PVE (nog toe te voegen) ───────────────────────── */
-const PdfPlaceholder = ({ label }) => (
-  <div className="pdf-placeholder">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-    </svg>
-    <span>{label}</span>
-  </div>
-);
 
 /* ── Image gallery with long-press zoom ─────────────────────────────── */
 const GalleryGrid = ({ images, landscape = false }) => {
@@ -687,7 +672,7 @@ const PageOnderzoek = () => {
           <div className="bron-item">Roel (Blueview Sociaal Atelier Apeldoorn). Interview over productiecapaciteit, ateliertarieven en haalbaarheid. Mei 2026. [Productieeisen, maakbaarheid]</div>
 
           <div className="bron-cat">Gebruik van AI</div>
-          <div className="bron-item">Claude (Anthropic, 2025–2026). Ingezet als ondersteuning bij: bronnenonderzoek en literatuursynthese; tekstredactie en formulering van verslagteksten; structurering en opbouw van het interactieve verslag; schrijven van code voor de website (JavaScript/React); voorbereiding van reflectiemomenten als conceptteksten. AI is gebruikt als denk- en redactiehulpmiddel — alle inhoudelijke keuzes, waardeoordelen en ontwerpbeslissingen zijn van de ontwerper zelf.</div>
+          <div className="bron-item">Claude (Anthropic, 2025–2026). Ingezet als ondersteuning bij: bronnenonderzoek en literatuursynthese; tekstredactie en formulering van verslagteksten; structurering en opbouw van het interactieve verslag; schrijven van code voor de website (JavaScript/React). AI is gebruikt als den en redactiehulpmiddel, alle inhoudelijke keuzes, waardeoordelen en ontwerpbeslissingen zijn gemaakt zonder het gebruik van AI.</div>
         </div>
       ),
     },
