@@ -615,7 +615,7 @@ const Step16_Vormonderzoek = () => {
           <p className="wf-body">
             Uit de doelgroep kwam naar voren dat de tas ook veel <strong>op de fiets</strong> wordt
             gebruikt. Een crossbody is dan niet de meest comfortabele keuze. Een rugzak of
-            de minder gebruikelijke <strong>slingback</strong> liggen dan beter. 
+            de minder gebruikelijke slingback liggen dan beter. 
           </p>
           <p className="wf-body">
             Dit leidde tot het idee om een crossbody te ontwerpen die met een of enkele
@@ -1554,10 +1554,10 @@ const PvEToetsingstabel = () => {
       {/* Header */}
       <div style={{ borderTop: '2px solid var(--ink)', paddingTop: 20, marginBottom: 20 }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-soft)', marginBottom: 8 }}>
-          O.3 · TOETSINGSTABEL — STAND VAN ZAKEN BIJ INLEVERING 2 JUNI 2026
+          O.3 · TOETSINGSTABEL STAND VAN ZAKEN BIJ INLEVERING 1 JUNI 2026
         </div>
         <p style={{ fontSize: 12, lineHeight: 1.7, color: 'var(--ink-soft)', margin: 0, maxWidth: '60ch' }}>
-          Onderstaande tabel toont per eis en wens de huidige status. <strong style={{color:'var(--ink)'}}>Voldaan</strong> is aantoonbaar aangetoond in het verslag. <strong style={{color:'var(--thread)'}}>Deels</strong> is in gang maar nog niet formeel gevalideerd. <strong style={{color:'var(--ink)'}}>Gepland (juni)</strong> wordt uitgevoerd in de periode tot de eindzitting op 30 juni.
+          Onderstaande tabel toont per eis en wens de huidige status. <strong style={{color:'var(--ink)'}}>Voldaan</strong> is aangetoond in het verslag. <strong style={{color:'var(--thread)'}}>Deels</strong> is in gang maar nog niet formeel gevalideerd. <strong style={{color:'var(--ink)'}}>Gepland (juni)</strong> wordt uitgevoerd in de periode tot de eindzitting op 30 juni.
         </p>
         {/* Teller */}
         <div style={{ display: 'flex', gap: 20, marginTop: 16 }}>

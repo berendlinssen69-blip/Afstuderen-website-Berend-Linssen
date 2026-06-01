@@ -1154,7 +1154,7 @@ const Step18_Verantwoording = () => {
             <li style={{padding:"12px 0", borderBottom:"1px solid var(--line-soft)"}}>
               <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>SPECIALISME</div>
               <p style={{fontSize:14, lineHeight:1.55}}>Sit &amp; Heat is specialist in buitenstof. Die expertise zit nu ook in de tas.
-              Het SDA-materiaal is UV-bestendig, waterafstotend en slijtvast — dezelfde kwaliteit
+              Het SDA-materiaal is UV-bestendig, waterafstotend en slijtvast. Dezelfde kwaliteit
               die Sit &amp; Heat in hun kernproducten levert. De keuze om dit restmateriaal direct
               te hergebruiken als buitenstof komt voort uit materiaalkennis, niet uit toeval.</p>
             </li>
@@ -1217,7 +1217,7 @@ const Step18_Verantwoording = () => {
                   "Beperking: doelgroep is gevalideerd via een retailer in Nijmegen. Bredere doelgroepvalidatie (gebruikerstest) volgt in juni 2026."],
                 ["DV 8", "Hoe verhouden de concepten zich tot kostprijs, duurzaamheidsimpact en verkoopprijs?",
                   "~€28 inkoopprijs, €70 verkoopprijs. ~53 tassen/maand uit huidige reststroom. ~874 kg CO₂e vermeden per maand. Volledig uitgewerkt in stap 27 (harde cijfers).",
-                  "Beperking: de kostprijsberekening is gedeeltelijk gebaseerd op schattingen. De CO₂-berekening volgt de Higg MSI methodiek met aannames voor transportafstand."],
+                  "Beperking: de kostprijsberekening is gedeeltelijk gebaseerd op schattingen. De CO₂ berekening volgt de Higg MSI methodiek met aannames voor transportafstand."],
               ].map(([k, vraag, antwoord, beperking], i) => (
                 <div key={i} style={{border:"1px solid var(--line)", padding:14, background:"var(--paper)"}}>
                   <div style={{fontFamily:"var(--mono)", fontSize:10, letterSpacing:"0.14em", color:"var(--thread)", marginBottom:4}}>{k}</div>
@@ -1298,7 +1298,7 @@ const Step18_Verantwoording = () => {
   );
 };
 
-/* ---------- 19. HARDE CIJFERS ---------- */
+/* ---------- 27. HARDE CIJFERS ---------- */
 const Step19_HardeCijfers = () => {
   const ref = useReveal();
   return (
@@ -1666,7 +1666,7 @@ const Outro = () => (
             week:"Week 4",
             pve:"O.1 · O.2 · O.3",
             title:"Presentatie voorbereiden",
-            body:"De presentatie voor HAN IPO op 30 juni vat het volledige traject samen: van reststroom tot productierijp concept. De PvE-toetsing van v4 (inclusief de testresultaten van stap 05) is onderdeel van de presentatie. Dit is het moment waarop het product formeel getoetst wordt aan alle eisen. Na de presentatie ligt er een compleet dossier klaar voor Sit & Heat."
+            body:"De presentatie voor HAN IPO op 30 juni vat het volledige traject samen: van reststroom tot productierijp concept. De PvE toetsing van v4 (inclusief de testresultaten van stap 05) is onderdeel van de presentatie. Dit is het moment waarop het product formeel getoetst wordt aan alle eisen. Na de presentatie ligt er een compleet dossier klaar voor Sit & Heat."
           },
         ].map(({num, week, pve, title, body}) => (
           <div key={num} style={{padding:"28px 24px", borderTop:"1px solid rgba(255,255,255,0.12)"}}>
@@ -1688,7 +1688,7 @@ const Outro = () => (
       <p className="wf-body" style={{marginTop:8}}>Berend Linssen · bi.linssen@student.han.nl</p>
       <p className="wf-body" style={{marginTop:4}}>Sit &amp; Heat · Sociaal atelier BlueView Apeldoorn</p>
       <p className="wf-body" style={{marginTop:16, color:"rgba(255,255,255,0.4)"}}>
-        Met dank aan Jorg (CEO Sit &amp; Heat), Jeroen (co-founder/sales Sit &amp; Heat), Niels (head of sales), Milan, Femke, Thijs, Hugo, Henri (Tempel Mode), Roel
+        Met dank aan Jorg (CEO Sit &amp; Heat), Jeroen (co-founder/sales Sit &amp; Heat), Niels (sales), Milan, Femke, Thijs, Hugo, Henri (Tempel Mode), Roel
         en iedereen bij het sociale atelier die dit mogelijk maakte.
       </p>
     </div>
@@ -1736,7 +1736,7 @@ const TerugkoppelingPrototyping = () => {
             De methodische keuze voor Design by Doing (stap 4) werd door de prototypefase gerechtvaardigd: materiaaleigenschappen zoals fraying, stijfheid en benodigde naadmarge waren niet op papier te voorspellen, maar kwamen pas naar voren door fysiek te maken. De risicoanalyse (stap 3) had materiaelvariatie en beperkte ateliercapaciteit als hoge risico's aangemerkt, beide kwamen daadwerkelijk terug als sturende factoren. Materiaelvariatie vroeg om organischere patronen (v4). Atelierbeperkingen (max. 10 lagen stof, 1 cm naadmarge, afgewerkte snijkanten) kwamen pas bij het Blueview gesprek (stap 24) aan het licht en ontbraken in het voorlopig PvE.
           </p>
           <p style={{fontSize:12, lineHeight:1.65, margin:"0 0 8px", color:"var(--ink-soft)"}}>
-            Het marktonderzoek (stap 5) suggereerde een consumentenprijs van 60–100 euro. Henri bevestigde dit segment bij de validatie van prototype 3 (stap 22), waarmee de aanname uit het onderzoek werd omgezet in een gevalideerde eis (E.2). Het voorlopig PvE (stap 6) groeide door de prototypefase van een kader zonder productie-eisen naar een levend document: vier nieuwe maakbaarheidseisen (M.3–M.6) zijn direct afkomstig uit de praktijk, niet uit deskresearch.
+            Het marktonderzoek (stap 5) suggereerde een consumentenprijs van 60–100 euro. Henri bevestigde dit segment bij de validatie van prototype 3 (stap 22), waarmee de aanname uit het onderzoek werd omgezet in een gevalideerde eis (E.2). Het voorlopig PvE (stap 6) groeide door de prototypefase van een kader zonder productie eisen naar een levend document: vier nieuwe maakbaarheidseisen (M.3–M.6) zijn direct afkomstig uit de praktijk, niet uit deskresearch.
           </p>
         </div>
       </div>

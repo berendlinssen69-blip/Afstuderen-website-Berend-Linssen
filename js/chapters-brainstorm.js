@@ -102,7 +102,7 @@ const BrainwritingIntro = () => {
             <strong>Waarom 446 Brainwriting?</strong> Dit voorkomt de klassieke groepsdynamiek problemen die bij verbaal brainstormen optreden: anchoring (het eerste idee domineert), de luidste stem wint, en niet iedereen durft iets te zeggen. De doorgeefstructuur dwingt iedereen gelijkwaardig bij te dragen en forceert het combineren en doorontwikkelen van andermans ideeën. Ook creeren met de Crazy 8's en de brainwriting samen ongeveer 144 verschillende ideeën. Dit is bewust gedaan zodat we zo veel mogelijk richtingen bekijken die kunnen met het materiaal. 
           </p>
           <p className="wf-body">
-            <strong>Kritisch punt:</strong> Het doorgeefmechanisme brengt een risico met zich mee: als iedereen verder bouwt op dezelfde ideeën, ontstaat vanzelf een gerichte richting. Om dat te voorkomen zijn twee verschillende groepen op twee verschillende dagen ingezet. Daardoor leverden de Crazy 8’s van dag een een ander startpunt op dan die van dag twee.
+            <strong>Kritisch punt:</strong> Het doorgeefmechanisme brengt een risico met zich mee: als iedereen verder bouwt op dezelfde ideeën, ontstaat vanzelf een richting. Om dat te voorkomen zijn twee verschillende groepen op twee verschillende dagen ingezet. Daardoor leverden de Crazy 8’s van dag een een ander startpunt op dan die van dag twee.
           </p>
         </div>
         <div className="step-stage reveal-right">

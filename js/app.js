@@ -183,6 +183,7 @@ const App = () => {
 
       <div>
         <div data-step-num="0"><Act2Intro /></div>
+        <Leeswijzer />
 
         <div data-step-num="1"><Step01_OpenVraag /></div>
         <div data-step-num="2"><Step02_VraagNaarOpdracht /></div>
@@ -192,6 +193,7 @@ const App = () => {
         <div data-step-num="6"><MaterialOnderzoekDeep /></div>
         <div data-step-num="7"><Step06_VoorlopigPvE /></div>
         <div data-step-num="8"><BrainstormSection /></div>
+        <TerugkoppelingBrainstorm />
         <div data-step-num="9"><Step09_StructurerenIdeeen /></div>
         <div data-step-num="10"><Step10_SchetsVerkenning /></div>
         <div data-step-num="11"><Step11_NaaienExploratie /></div>
@@ -209,6 +211,7 @@ const App = () => {
         <div data-step-num="22"><Step22_Stakeholders /></div>
         <div data-step-num="23"><Step23_Prototype4 /></div>
         <div data-step-num="24" className="layout-reversed"><Step24_SociaalAtelier /></div>
+        <TerugkoppelingPrototyping />
         <div data-step-num="25"><Step25_DefinitiefPvE /></div>
         <div data-step-num="26"><Step18_Verantwoording /></div>
         <div data-step-num="27"><Step19_HardeCijfers /></div>
